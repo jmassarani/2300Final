@@ -21,13 +21,11 @@
             $current_page = "About";
             include "includes/nav.php"
         ?>
-        <div class="container flex body-margin">
-            <div class="home">
-                Ronni S. Rabin founded Queen of Schmooze to help others. She has extensive experience in sales, marketing, and client development/corporate relations. She excels at opening doors with top-decision makers, developing and building relationships, outreach, creating partnerships, increasing sales, refining brands.
-            </div>
-        </div>
-        <div class="profile center-align">
+        <div class="profile center-align col-sm-3">
             <img src="images/RonniRabinPR.png" alt="profile-picture">
+        </div>
+        <div class="container flex body-margin col-sm-9">
+            Ronni S. Rabin founded Queen of Schmooze to help others. She has extensive experience in sales, marketing, and client development/corporate relations. She excels at opening doors with top-decision makers, developing and building relationships, outreach, creating partnerships, increasing sales, refining brands.
         </div>
 	</body>
 </html>
