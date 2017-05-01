@@ -5,10 +5,11 @@
 		<title>Home</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
+        <link rel="stylesheet" href="styles/home.css">
         <?php 
-    require_once('includes/config.php');
-    include 'includes/header.php';
-?>
+            require_once('includes/config.php');
+            include 'includes/header.php';
+        ?>
 	</head>
 
 	<body>
