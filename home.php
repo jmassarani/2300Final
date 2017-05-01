@@ -52,7 +52,8 @@
                 </ul>
             </div>
             <div class="profile center-align">
-                <img src="graphics/Profile.jpg" alt="profile-picture">
+<!--                TODO: need to add a valid home page image-->
+<!--                <img src="graphics/Profile.jpg" alt="profile-picture">-->
             </div>
         </div>
 	</body>

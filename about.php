@@ -17,7 +17,7 @@
         </header>
         <?php
             global $current_page;
-            $current_page = "Home";
+            $current_page = "About";
             include "includes/nav.php"
         ?>
 	</body>
