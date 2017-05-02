@@ -127,9 +127,11 @@
                         $p1 = htmlspecialchars(trim($_POST['password1']));
                         $p2 = htmlspecialchars(trim($_POST['password2']));
                         
+                        $flag = true;
                         //if password1 and password2 dont match
                         if ($p1 != $p2) {
                             echo "<p>Error: Passwords do not match</p>";
+                            $flag = false;
                         }
                         //if email already exists
                         $email_exists = $mysqli->query("SELECT email FROM users");
@@ -137,7 +139,7 @@
                             $check = $row['email'];
                             if ($email == $check) {
                                 echo "<p>There is already an account associated with this email</p>";
-                            }
+                            $flag = false;}
                         }
                         //if username already exists
                         $username_exists = $mysqli->query("SELECT username FROM users");
@@ -145,11 +147,11 @@
                             $check = $row['username'];
                             if ($username == $check) {
                                 echo "<p>This username has already been taken. Please choose another</p>";
-                            }
+                            $flag = false;}
                         }
                         //create account
 
-                        else {
+                        if ($flag == true) {
                             //hash password
 //                            $hashed = password_hash($p1, PASSWORD_DEFAULT);
                             $hashed = password_hash($p1, PASSWORD_DEFAULT) . '<br>';
