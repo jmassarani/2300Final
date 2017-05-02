@@ -1,8 +1,10 @@
-nav ul {
+.nav ul {
     list-style: none;
-    background-color: #393a3f;
+/*    background-color: #393a3f;*/
     text-align: center;
     margin: 0;
+    border-bottom-style: outset;
+    border-top-style: inset;
 }
 .nav li {
     font-size: 1.2em;

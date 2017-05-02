@@ -14,6 +14,10 @@ img {
     color: #8ea5be;
 }
 
+.container {
+    margin: 20px;
+}
+
 @media screen and (max-width: 699px) {
     .container {
         display: block;

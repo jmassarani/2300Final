@@ -23,10 +23,9 @@
             $current_page = "Blog";
             include "includes/nav.php"
         ?>
-        <div id="wrapper">
+    <div id="wrapper" class="container">
 
 		<h1>Blog</h1>
-		<hr />
 
 		<?php
                 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);

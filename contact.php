@@ -23,17 +23,20 @@
             $current_page = "Contact";
             include "includes/nav.php"
         ?>
-        <form class = "contact_form" method = post>
-            <label>Name</label>
-            <input name="name" placeholder="Enter Your Name" required>*
-            <label>Email</label>
-            <input name="email" type="email" placeholder="Enter Your Email" required>*
+        <div class="container">
+            <form class = "contact_form" method = post>
+                <label>Name</label>
+                <input name="name" placeholder="Enter Your Name" required>*
+                <label>Email</label>
+                <input name="email" type="email" placeholder="Enter Your Email" required>*
 
-            <label>Phone Number</label>
-            <input name="phone" type="text" placeholder="(Optional)">
-            <label>Message</label>
-            <textarea name="message" placeholder="Type Here" required></textarea>
-            <input id="submit" name="submit" type="submit" value="Submit"> </form>
+                <label>Phone Number</label>
+                <input name="phone" type="text" placeholder="(Optional)">
+                <label>Message</label>
+                <textarea name="message" placeholder="Type Here" required></textarea>
+                <input id="submit" name="submit" type="submit" value="Submit"> 
+            </form>
+        </div>
     </body>
 
     

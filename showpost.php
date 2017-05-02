@@ -30,7 +30,7 @@
 </head>
 <body>
 
-	<div id="wrapper">
+	<div id="wrapper" class="container">
 
 		<h1>Blog</h1>
 		<hr />

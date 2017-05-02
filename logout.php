@@ -22,17 +22,18 @@
             $current_page = "Logout";
             include "includes/nav.php"
         ?>
-        <div class="log_out">
+        <div class="container log_out">
             <form method="post" action="home.php">
                 <p>Already signed in, want to log out?</p>
                 <input type="submit" name="logout" value="Log Out">
 
             </form>
-                <?php
+            <?php
                 if (isset($_POST['logout'])) {
+                    unset($_SESSION['logged_user_by_sql']);
                     session_destroy();
                 }
-        ?>
+            ?>
         </div>
     </body>
 </html>

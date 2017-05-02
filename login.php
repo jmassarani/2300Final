@@ -26,66 +26,67 @@
         ?>
         
         
-        <?php
-        //adapted from provided code from login.php from piazza
-        $post_username = filter_input( INPUT_POST, 'username', FILTER_SANITIZE_STRING );
-        $post_password = filter_input( INPUT_POST, 'password', FILTER_SANITIZE_STRING );
-        
-        if ( empty( $post_username ) || empty( $post_password ) ) {
-        ?>
-        <div class="log_in">
-            <h2>Log In</h2>
-            <form action="login.php" method="post">
-                <label>Username: </label><input type="text" name="username"><br>
-                <label>Password: </label><input type="password" name="password"><br>
-                <input type="submit" value="Submit">
-        
-            </form>
-        </div>
+        <div class="container">
+            <?php
+            //adapted from provided code from login.php from piazza
+            $post_username = filter_input( INPUT_POST, 'username', FILTER_SANITIZE_STRING );
+            $post_password = filter_input( INPUT_POST, 'password', FILTER_SANITIZE_STRING );
 
-        <?php
-            } else {
-                require_once 'includes/config.php';
-                $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        
-            
-                $result = $mysqli->query("SELECT * FROM users WHERE username='$post_username'");
-            
-                if ($result && $result->num_rows == 1) {
-                    $row = $result->fetch_assoc();
-                    $db_hash_password = $row['hashpassword'];
-//                    echo $db_hash_password;
-                    
-                    
-                    if( password_verify( $post_password, $db_hash_password ) ) {
-                        $db_username = $row['username'];
-                        $_SESSION['logged_user_by_sql'] = $db_username;
-//                        echo "matched";
-                        
+            if ( empty( $post_username ) || empty( $post_password ) ) {
+            ?>
+            <div class="log_in">
+                <h2>Log In</h2>
+                <form action="login.php" method="post">
+                    <label>Username: </label><input type="text" name="username"><br>
+                    <label>Password: </label><input type="password" name="password"><br>
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+
+            <?php
+                } else {
+                    require_once 'includes/config.php';
+                    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+
+                    $result = $mysqli->query("SELECT * FROM users WHERE username='$post_username'");
+
+                    if ($result && $result->num_rows == 1) {
+                        $row = $result->fetch_assoc();
+                        $db_hash_password = $row['hashpassword'];
+    //                    echo $db_hash_password;
+
+
+                        if( password_verify( $post_password, $db_hash_password ) ) {
+                            $db_username = $row['username'];
+                            $_SESSION['logged_user_by_sql'] = $db_username;
+    //                        echo "matched";
+
+                        }
                     }
+
+
+
+                    $mysqli->close();
+
+                    if ( isset($_SESSION['logged_user_by_sql'] ) ) {
+                        echo "<div class='box3'>";
+                        echo "<p>Congratulations. You have successfully signed in!<p>";
+                        echo "</div>";
+                    }
+                    else {
+                        echo "<div class='box3'>";
+                        echo "<p>You did not login successfully.</p>";
+                        echo "<p>Please <a href='login.php'>try again</a></p>";
+                        echo "</div>";
+
+                    }
+    //            $hashed_password = password_hash("schmooze", PASSWORD_DEFAULT) . '<br>';
+    //            echo "<p>Hashed password: $hashed_password</p>";
                 }
-                
-                
-                
-                $mysqli->close();
-                
-                if ( isset($_SESSION['logged_user_by_sql'] ) ) {
-                    echo "<div class='box3'>";
-                    echo "<p>Congratulations. You have successfully signed in!<p>";
-                    echo "</div>";
-                }
-                else {
-                    echo "<div class='box3'>";
-                    echo "<p>You did not login successfully.</p>";
-                    echo "<p>Please <a href='login.php'>try again</a></p>";
-                    echo "</div>";
-                    
-                }
-//            $hashed_password = password_hash("schmooze", PASSWORD_DEFAULT) . '<br>';
-//            echo "<p>Hashed password: $hashed_password</p>";
-            }
-        ?>
-        <div class="create_user">
+            ?>
+            <div class="create_user">
             <form method="post" action="login.php">
                 <h2>Are you new to this site and want to create an account?</h2>
                 <label>First Name:</label><input type="text" name="fname"><br>
@@ -164,6 +165,7 @@
                 }
             
                 ?>
+            </div>
         </div>
         
     </body>
