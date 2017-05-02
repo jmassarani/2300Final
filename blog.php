@@ -1,8 +1,8 @@
 <!doctype html>
-
+<!--some code adapted from https://github.com/daveismyname/simple-blog-part-1-build-->
 <html>
 	<head>
-		<title>Home</title>
+		<title>Blog</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
         <?php 
@@ -26,15 +26,16 @@
 		<hr />
 
 		<?php
+                $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			try {
-				$stmt = $db->query('SELECT postID, postTitle, postDesc, postDate FROM blog_posts ORDER BY postID DESC');
-				while($row = $stmt->fetch()){
+				$sql = $mysqli->query('SELECT postID, postTitle, postDesc, postDate FROM blog_posts ORDER BY postID DESC');
+				while($row = $sql->fetch_assoc()){
 					
 					echo '<div>';
-						echo '<h1><a href="viewpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h1>';
+						echo '<h1><a href="showpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h1>';
 						echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['postDate'])).'</p>';
 						echo '<p>'.$row['postDesc'].'</p>';				
-						echo '<p><a href="viewpost.php?id='.$row['postID'].'">Read More</a></p>';				
+						echo '<p><a href="showpost.php?id='.$row['postID'].'">Read More</a></p>';				
 					echo '</div>';
 				}
 			} catch(PDOException $e) {
