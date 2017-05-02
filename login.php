@@ -2,7 +2,7 @@
     session_start();
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 	<head>
@@ -21,7 +21,7 @@
         </header>
         <?php
             global $current_page;
-            $current_page = "Home";
+            $current_page = "Login";
             include "includes/nav.php"
         ?>
         

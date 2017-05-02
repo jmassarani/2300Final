@@ -24,9 +24,17 @@
                 printLink ($title, $link);
             }
             if (isset($_SESSION['logged_user_by_sql'])) {
-                echo "<li><a class='logout_button' href='logout.php'>Logout</a></li>";
+                echo "<li><a class='logout_button";
+                if ($GLOBALS["current_page"] == 'Logout') {
+                    echo " active";
+                }
+                echo "' href='logout.php'>Logout</a></li>";
             } else {
-                echo "<li><a class='login_button' href='login.php'>Login</a></li>";
+                echo "<li><a class='login_button";
+                if ($GLOBALS["current_page"] == 'Login') {
+                    echo " active";
+                }
+                echo "' href='login.php'>Login</a></li>";
             }
         ?>
     </ul>

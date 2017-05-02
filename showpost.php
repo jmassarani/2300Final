@@ -1,20 +1,22 @@
-<?php require('includes/config.php'); 
-require_once('includes/config.php');
+<?php
+    session_start();
+    require('includes/config.php'); 
+    require_once('includes/config.php');
     include 'includes/header.php';
-$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-$id = $_GET['id'];
-$result = $mysqli->query("SELECT postID, postTitle, postCont, postDate FROM blog_posts WHERE postID = $id");
+    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $id = $_GET['id'];
+    $result = $mysqli->query("SELECT postID, postTitle, postCont, postDate FROM blog_posts WHERE postID = $id");
 
-$row = $result->fetch_assoc();
-//if post does not exists redirect user.
-if($row['postID'] == ''){
-	header('Location: ./');
-	exit;
-}
+    $row = $result->fetch_assoc();
+    //if post does not exists redirect user.
+    if($row['postID'] == ''){
+        header('Location: ./');
+        exit;
+    }
 
-global $current_page;
-            $current_page = "Blog";
-            include "includes/nav.php"
+    global $current_page;
+        $current_page = "Blog";
+        include "includes/nav.php"
 ?>
 <!--some code adapted from https://github.com/daveismyname/simple-blog-part-1-build-->
 <!DOCTYPE html>
