@@ -20,7 +20,7 @@
         </header>
         <?php
             global $current_page;
-            $current_page = "Contaact";
+            $current_page = "Contact";
             include "includes/nav.php"
         ?>
         <form class = "contact_form" method = post>
