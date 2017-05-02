@@ -23,15 +23,15 @@
             include "includes/nav.php"
         ?>
         <div class="container log_out">
-            <form method="post" action="home.php">
+            <form method="post">
                 <p>Already signed in, want to log out?</p>
                 <input type="submit" name="logout" value="Log Out">
-
             </form>
             <?php
                 if (isset($_POST['logout'])) {
                     unset($_SESSION['logged_user_by_sql']);
                     session_destroy();
+                    header("Location: home.php");
                 }
             ?>
         </div>
