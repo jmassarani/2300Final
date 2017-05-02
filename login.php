@@ -40,11 +40,11 @@
                 <form action="login.php" method="post">
                     <div class="field">
                         <label>Username: </label>
-                        <input type="text" name="username">
+                        <input type="text" name="username" required>
                     </div>
                     <div class="field">
                         <label>Password: </label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" required>
                     </div>
                         <input type="submit" value="Submit">
                 </form>
