@@ -9,6 +9,7 @@
 		<title>Home</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
+        <link rel="stylesheet" href="styles/form.css">
         <?php 
     require_once('includes/config.php');
     include 'includes/header.php';
@@ -37,10 +38,15 @@
             <div class="log_in">
                 <h2>Log In</h2>
                 <form action="login.php" method="post">
-                    <label>Username: </label><input type="text" name="username"><br>
-                    <label>Password: </label><input type="password" name="password"><br>
-                    <input type="submit" value="Submit">
-
+                    <div class="field">
+                        <label>Username: </label>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="field">
+                        <label>Password: </label>
+                        <input type="password" name="password">
+                    </div>
+                        <input type="submit" value="Submit">
                 </form>
             </div>
 
@@ -87,14 +93,32 @@
                 }
             ?>
             <div class="create_user">
+            <h2>Are you new to this site and want to create an account?</h2>
             <form method="post" action="login.php">
-                <h2>Are you new to this site and want to create an account?</h2>
-                <label>First Name:</label><input type="text" name="fname"><br>
-                <label>Last Name:</label><input type="text" name="lname"><br>
-                <label>Email:</label><input type="text" name="email"><br>
-                <label>Username:</label><input type="text" name="username"><br>
-                <label>Password:</label><input type="password" name="password1"><br>
-                <label>Repeat Password:</label><input type="password" name="password2"><br>
+                <div class="field">
+                    <label>First Name:</label>
+                    <input type="text" name="fname">
+                </div>
+                <div class="field">
+                    <label>Last Name:</label>
+                    <input type="text" name="lname">
+                </div>
+                <div class="field">
+                    <label>Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="field">
+                    <label>Username:</label>
+                    <input type="text" name="username">
+                </div>
+                <div class="field">
+                    <label>Password:</label>
+                    <input type="password" name="password1">
+                </div>
+                <div class="field">
+                    <label>Repeat Password:</label>
+                    <input type="password" name="password2">
+                </div>
                 <input type="submit" name="createnew" value="Create Account">
 
             </form>
