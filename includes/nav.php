@@ -1,5 +1,5 @@
-
-<div class = "nav">
+<!--<script src="../js/navbar.js"></script>-->
+<nav id="nav_bar">
     <ul>
         <?php
             $nav_items = array (
@@ -38,6 +38,5 @@
             }
         ?>
     </ul>
-
-</div>
+</nav>
 

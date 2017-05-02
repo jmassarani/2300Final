@@ -1,4 +1,11 @@
-.nav ul {
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
+
+nav ul {
     list-style: none;
 /*    background-color: #393a3f;*/
     text-align: center;
@@ -6,28 +13,28 @@
     border-bottom-style: outset;
     border-top-style: inset;
 }
-.nav li {
+nav li {
     font-size: 1.2em;
     line-height: 40px;
     height: 40px;
     border-bottom: 1px solid #888;
 }
  
-.nav a {
+nav a {
     text-decoration: none;
     color: black;
     display: block;
     transition: .3s background-color;
 }
  
-.nav a:hover {
+nav a:hover {
     text-decoration: none;
     font-weight: bold;
     color: #444;
 /*    background-color: lightblue;*/
 }
  
-.nav a.active {
+nav a.active {
     text-decoration: none;
     font-weight: bold;
 /*    background-color: lightblue;*/
@@ -36,7 +43,7 @@
 }
  
 
-.nav li {
+nav li {
     width: 120px;
     border-bottom: none;
     height: 50px;
@@ -45,7 +52,7 @@
 }
 
 
-.nav li {
+nav li {
     display: inline-block;
     padding-left: 1em;
     padding-right: 1em;
