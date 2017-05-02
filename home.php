@@ -1,5 +1,4 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Home</title>
@@ -23,7 +22,7 @@
         ?>
         <div class="container flex body-margin">
             <div class="home col-sm-9">
-                <p>&quot;You&#39;re a great organization with great ideas and want to show it - why leave things to chance?&quot; Sometimes an extra push or nudge or effort it needed!</p>
+                <p>"You're a great organization with great ideas and want to show it - why leave things to chance?" Sometimes an extra push or nudge or effort it needed!</p>
                 <p>One of our biggest challenges is how to connect with one another in a genuine way.  We are here to help you to make this happen. </p>
                 <p>Schoomzers by the hour or short term hire for the project – Contact us to discuss your needs for: a social butterfly at your next event, some who smartly connects people to people, a tester for your new product or new product introduction, trade show, an attendee at an important social or business event, dinners, lunch meetings, special event. Someone to call in to finish a project, plan an event, make phone calls, increase sales and develop new business, organize and follow-up on pr outreach, attend a trade show and more ...</p>
                 <p>schmooze |SHmo͞oz| (also shmooze)  Verb [no obj.] Talk cozily in a friendly comfortable manner, getting to know the other person or people with an ultimate goal to impress and create communication and authentic relationships. </p>

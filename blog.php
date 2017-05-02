@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--some code adapted from https://github.com/daveismyname/simple-blog-part-1-build-->
 <html>
 	<head>
@@ -6,9 +6,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
         <?php 
-    require_once('includes/config.php');
-    include 'includes/header.php';
-?>
+            require_once('includes/config.php');
+            include 'includes/header.php';
+        ?>
 	</head>
 
 	<body>

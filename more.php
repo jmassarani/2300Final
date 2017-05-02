@@ -1,8 +1,7 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>More</title>
+		<title>Home</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
         <?php 

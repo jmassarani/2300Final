@@ -1,14 +1,11 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Home</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
         <?php 
-    require_once('includes/config.php');
-    include 'includes/header.php';
-?>
+            require_once('includes/config.php');
+            include 'includes/header.php';
+        ?>
 	</head>
 
 	<body>
@@ -33,5 +30,6 @@
 
 
         ?>
+        </div>
     </body>
 </html>
