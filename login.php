@@ -55,8 +55,11 @@
                     require_once 'includes/config.php';
                     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-
-                    $result = $mysqli->query("SELECT * FROM users WHERE username='$post_username'");
+                    $stmt = $mysqli->stmt_init();
+                    $stmt->prepare("SELECT * FROM users WHERE username=?"); $stmt->bind_param('s', $post_username);
+                    $stmt->execute();
+                    $result=$stmt->get_result();
+//                    $result = $mysqli->query("SELECT * FROM users WHERE username='$post_username'");
 
                     if ($result && $result->num_rows == 1) {
                         $row = $result->fetch_assoc();
