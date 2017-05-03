@@ -3,7 +3,7 @@
 }
 
 img {
-    height: 250px;
+    width: 100%;
 }
 
 .profile img {
@@ -16,6 +16,10 @@ img {
 
 .container {
     margin: 20px;
+}
+
+.resume {
+    height: 100vh;
 }
 
 @media screen and (max-width: 699px) {
