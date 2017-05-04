@@ -1,8 +1,12 @@
 .navbar-fixed {
     top: 0;
     z-index: 100;
-  position: fixed;
+    position: fixed;
     width: 100%;
+}
+
+#nav_bar {
+    background-color: white;
 }
 
 nav ul {
@@ -10,6 +14,7 @@ nav ul {
 /*    background-color: #393a3f;*/
     text-align: center;
     margin: 0;
+    border-color: orchid;
     border-bottom-style: outset;
     border-top-style: inset;
 }
@@ -22,15 +27,15 @@ nav li {
  
 nav a {
     text-decoration: none;
-    color: black;
+    color: thistle;
     display: block;
     transition: .3s background-color;
 }
  
-nav a:hover {
+nav a:hover, nav a:focus {
     text-decoration: none;
     font-weight: bold;
-    color: #444;
+    color: purple;
 /*    background-color: lightblue;*/
 }
  
@@ -38,7 +43,7 @@ nav a.active {
     text-decoration: none;
     font-weight: bold;
 /*    background-color: lightblue;*/
-    color: #444;
+    color: purple;
     cursor: default;
 }
  
