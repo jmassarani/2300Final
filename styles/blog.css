@@ -1,0 +1,7 @@
+.blog a {
+    color: purple;
+}
+
+.blog a:hover, .blog a:focus {
+    color: purple;
+}

@@ -8,6 +8,7 @@
 		<title>Blog</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
+        <link rel="stylesheet" href="styles/blog.css">
         <?php 
             require_once('includes/config.php');
             include 'includes/header.php';
@@ -23,7 +24,7 @@
             $current_page = "Blog";
             include "includes/nav.php"
         ?>
-        <div id="wrapper" class="container">
+        <div id="wrapper" class="container blog">
             <div class="col-sm-3">
                 <h1>Blog Posts</h1>
                 <ul>
