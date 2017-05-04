@@ -28,8 +28,10 @@
                 <div class="profile center-align col-sm-3">
                     <img class="image" src="images/RonniRabinPR.png" alt="profile-picture">
                 </div>
-                <div class="container flex body-margin col-sm-9">
-                    Ronni S. Rabin founded Queen of Schmooze to help others. She has extensive experience in sales, marketing, and client development/corporate relations. She excels at opening doors with top-decision makers, developing and building relationships, outreach, creating partnerships, increasing sales, refining brands.
+                <div class="col-sm-9">
+                    <h3>Ronni S. Rabin</h3><p>Ronni S. Rabin founded Queen of Schmooze to help others. She has extensive experience in sales, marketing, and client development/corporate relations. She excels at opening doors with top-decision makers, developing and building relationships, outreach, creating partnerships, increasing sales, refining brands.</p>
+                    <p>She has exceptional interpersonal, communication and networking skills. She is organized, self-disciplined and professional in demeanor. Ronni has the ability to work idividually and as part of a team. She is highly self-motivated, energetic, creative, and accountable.</p>
+                    <p>Ronni has had multiple professional experiences to support her abilities. Some of her past jobs includes being a Marketing Director, Public Relations Manager, and Account Supervisor. </p>
                 </div>
             </div>
             <div>

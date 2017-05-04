@@ -6,8 +6,7 @@
                 "Home"=>"home.php",
                 "About"=>"about.php",
                 "Contact"=>"contact.php",
-                "Blog"=>"blog.php",
-                "More"=>"more.php"
+                "Blog"=>"blog.php"
             );
 
             function printLink ($title, $link) {
@@ -23,6 +22,11 @@
             foreach($nav_items as $title=>$link) {
                 printLink ($title, $link);
             }
+            print ("<li class='dropdown");
+            if ($GLOBALS["current_page"] == 'What is Schmooze') {
+                echo " active";
+            } 
+            print ("'>More</a><div class='dropdown-content'><a href='more.php'>What is Schmooze</a></div></li>");
             if (isset($_SESSION['logged_user_by_sql'])) {
                 echo "<li><a class='logout_button";
                 if ($GLOBALS["current_page"] == 'Logout') {

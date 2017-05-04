@@ -5,6 +5,5 @@ define( 'DB_NAME', 'info230_SP17_fp_anon' );
 // Your MySQL / Course Server username 
 define('DB_USER', 'fp_anon');
 // ...and password
-define('DB_PASSWORD', 'schmooze');
-?>
+define('DB_PASSWORD', 'schmooze'); ?>
 

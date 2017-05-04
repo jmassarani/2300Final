@@ -25,21 +25,21 @@ nav li {
     border-bottom: 1px solid #888;
 }
  
-nav a {
+nav a, nav .dropdown {
     text-decoration: none;
     color: thistle;
     display: block;
     transition: .3s background-color;
 }
  
-nav a:hover, nav a:focus {
+nav a:hover, nav a:focus, nav .dropdown:hover, nav .dropdown:focus {
     text-decoration: none;
     font-weight: bold;
     color: purple;
 /*    background-color: lightblue;*/
 }
  
-nav a.active {
+nav a.active, nav .dropdown.active {
     text-decoration: none;
     font-weight: bold;
 /*    background-color: lightblue;*/
@@ -65,4 +65,35 @@ nav li {
 
 header {
     text-align: center;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top: inset orchid;
+}
+
+.dropdown-content a {
+    color: thistle;
+    padding: 0 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: .75em;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

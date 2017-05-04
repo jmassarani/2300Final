@@ -21,6 +21,7 @@
 
         <meta charset="utf-8">
         <title>Blog - <?php echo $row['postTitle'];?></title>
+        <link rel="stylesheet" href="styles/blog.css">
 <!--
         <link rel="stylesheet" href="style/normalize.css">
         <link rel="stylesheet" href="style/main.css">
@@ -35,10 +36,7 @@
             $current_page = "Blog";
             include "includes/nav.php"
         ?>
-        <div id="wrapper" class="container">
-
-            <h1>Blog</h1>
-            <hr />
+        <div id="wrapper" class="container blog">
             <p><a href="blog.php">Return To Blog Home</a></p>
 
 
