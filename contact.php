@@ -17,7 +17,7 @@
 
     <body class = "contact">
         <header>
-            <h1>Queen of Schmooze</h1>
+            <img src="images/Logo.png" alt="Logo">
         </header>
         <?php
             global $current_page;

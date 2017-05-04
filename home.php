@@ -16,7 +16,7 @@
 
 	<body>
         <header>
-            <h1>Queen of Schmooze</h1>
+            <img src="images/Logo.png" alt="Logo">
         </header>
         <?php
             global $current_page;
@@ -56,7 +56,7 @@
             </div>
             <div class="center-align col-sm-3">
 <!--TODO: need to add a valid home page image; temporary placeholder image-->
-                <img src="images/HomeCartoon.jpg" alt="home-cartoon">
+                <img class="image" src="images/HomeCartoon.jpg" alt="home-cartoon">
             </div>
         </div>
 	</body>

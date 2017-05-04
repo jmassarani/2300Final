@@ -13,39 +13,44 @@
         header('Location: ./');
         exit;
     }
-
-    global $current_page;
-        $current_page = "Blog";
-        include "includes/nav.php"
 ?>
 <!--some code adapted from https://github.com/daveismyname/simple-blog-part-1-build-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="utf-8">
-    <title>Blog - <?php echo $row['postTitle'];?></title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/main.css">
-</head>
-<body>
+    <head>
 
-	<div id="wrapper" class="container">
+        <meta charset="utf-8">
+        <title>Blog - <?php echo $row['postTitle'];?></title>
+<!--
+        <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/main.css">
+-->
+    </head>
+    <body>
+        <header>
+            <img src="images/Logo.png" alt="Logo">
+        </header>
+        <?php
+            global $current_page;
+            $current_page = "Blog";
+            include "includes/nav.php"
+        ?>
+        <div id="wrapper" class="container">
 
-		<h1>Blog</h1>
-		<hr />
-		<p><a href="blog.php">Return To Blog Home</a></p>
+            <h1>Blog</h1>
+            <hr />
+            <p><a href="blog.php">Return To Blog Home</a></p>
 
 
-		<?php	
-			echo '<div>';
-				echo '<h1>'.$row['postTitle'].'</h1>';
-				echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
-				echo '<p>'.$row['postCont'].'</p>';				
-			echo '</div>';
-		?>
+            <?php	
+                echo '<div>';
+                    echo '<h1>'.$row['postTitle'].'</h1>';
+                    echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
+                    echo '<p>'.$row['postCont'].'</p>';				
+                echo '</div>';
+            ?>
 
-	</div>
+        </div>
 
-</body>
+    </body>
 </html>
