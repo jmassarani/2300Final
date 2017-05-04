@@ -28,14 +28,11 @@
                 <h4>"You're a great organization with great ideas and want to show it - why leave things to chance?" Sometimes an extra push or nudge or effort it needed!</h4>
                 <p>One of our biggest challenges is how to connect with one another in a genuine way.  We are here to help you to make this happen. </p>
                 <p>Schoomzers by the hour or short term hire for the project – Contact us to discuss your needs for: a social butterfly at your next event, some who smartly connects people to people, a tester for your new product or new product introduction, trade show, an attendee at an important social or business event, dinners, lunch meetings, special event. Someone to call in to finish a project, plan an event, make phone calls, increase sales and develop new business, organize and follow-up on pr outreach, attend a trade show and more ...</p>
-            </div>
-            <div class="center-align col-sm-3">
-<!--TODO: need to add a valid home page image; temporary placeholder image-->
-                <img class="image" src="images/HomeCartoon.jpg" alt="home-cartoon">
-            </div>
-        </div>
-	</body>
-</html>  <li>Do you have an important business event that requires entertaining?</li>
+                
+                <p>Our company was formed to be the missing link. By responding with flexible hours on projects we can be there for you when you need us. </p>
+                <ul>
+                    <li>When do I need a schmoozer or two?</li>
+                    <li>Do you have an important business event that requires entertaining?</li>
                     <li>An important dinner party and you want to make sure there is a comfortable flow of lively conversation?</li>
                     <li>A special event that needs planning, tweaking, music, a mood or theme?</li>
                     <li>Launching a new product and need assistance at the demo?</li>

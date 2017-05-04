@@ -59,7 +59,6 @@
                     $stmt->prepare("SELECT * FROM users WHERE username=?"); $stmt->bind_param('s', $post_username);
                     $stmt->execute();
                     $result=$stmt->get_result();
-//                    $result = $mysqli->query("SELECT * FROM users WHERE username='$post_username'");
 
                     if ($result && $result->num_rows == 1) {
                         $row = $result->fetch_assoc();
