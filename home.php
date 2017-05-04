@@ -35,4 +35,24 @@
             </div>
         </div>
 	</body>
+</html>  <li>Do you have an important business event that requires entertaining?</li>
+                    <li>An important dinner party and you want to make sure there is a comfortable flow of lively conversation?</li>
+                    <li>A special event that needs planning, tweaking, music, a mood or theme?</li>
+                    <li>Launching a new product and need assistance at the demo?</li>
+                    <li>Need someone to interact with media, customers, potential customers, investors, and potential investors?</li>
+                    <li>Have a goal to reach and short on staff?</li>
+                    <li>Setting up a press conference? Need help?</li>
+                    <li>Coming down to the wire on a special event? Need a few extra hands?</li>
+                    <li>Attending a trade show and short on staff?</li>
+                    <li>Holding an important business dinner and need some lively conversation to break the ice?</li>
+                    <li>Networking at an event and need some more feet on the ground?</li>
+                    <li>Are you a brilliant techie and need someone to translate your ideas into concepts for dummies?</li>
+                </ul>
+            </div>
+            <div class="center-align col-sm-3">
+<!--TODO: need to add a valid home page image; temporary placeholder image-->
+                <img class="image" src="images/HomeCartoon.jpg" alt="home-cartoon">
+            </div>
+        </div>
+	</body>
 </html>

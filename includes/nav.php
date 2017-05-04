@@ -44,3 +44,38 @@
     </ul>
 </nav>
 
+on";
+////                if ($GLOBALS["current_page"] == 'Logout') {
+////                    echo " active";
+////                }
+////                echo "' href='logout.php'>Logout</a></li>";
+//            } else {
+////                echo "<li><a class='login_button";
+////                if ($GLOBALS["current_page"] == 'Login') {
+////                    echo " active";
+////                }
+////                echo "' href='login.php'>Login</a></li>";
+//            }
+            // More: Dropdown Menu
+            print ("<li class='dropdown");
+            if ($GLOBALS["current_page"] == 'What is Schmooze?') {
+                echo " active";
+            } 
+            print ("'>More</a><div class='dropdown-content'><a href='more.php'>What is Schmooze?</a></div></li>");
+            // Login/Logout Navigation
+            if (isset($_SESSION['logged_user_by_sql'])) {
+                echo "<li><a class='logout_button";
+                if ($GLOBALS["current_page"] == 'Logout') {
+                    echo " active";
+                }
+                echo "' href='logout.php'>Logout</a></li>";
+            } else {
+                echo "<li><a class='login_button";
+                if ($GLOBALS["current_page"] == 'Login') {
+                    echo " active";
+                }
+                echo "' href='login.php'>Login</a></li>";
+            }
+        ?>
+    </ul>
+</nav>
