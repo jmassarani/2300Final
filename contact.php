@@ -26,23 +26,28 @@
         ?>
         <div class="container">
             <form class = "contact_form" method = post>
+                <h2>How Can We Help You Connect With Others?</h2>
                 <div class="field">
                     <label>Name</label>
-                    <input name="name" placeholder="Enter Your Name" required>*
+                    <input name="name" id="name_field" placeholder="Enter Your Name" required>*
                 </div>
                 <div class="field">
                     <label>Email</label>
-                    <input name="email" type="email" placeholder="Enter Your Email" required>*
+                    <input name="email" id="email_field" type="email" placeholder="Enter Your Email" required>*
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
-                    <input name="phone" type="text" placeholder="(Optional)">
+                    <input name="phone" id="phone_field" type="text" placeholder="(Optional)">
                 </div>
                 <div class="field">
-                    <label>Message</label>
+                    <label>Message:</label>
+                    <br>
                     <textarea name="message" placeholder="Type Here" required></textarea>
                 </div>
+                <div class="field">
+                    
                 <input id="submit" name="submit" type="submit" value="Submit"> 
+                </div>
             </form>
         </div>
     </body>
