@@ -3,7 +3,7 @@
     <ul>
         <?php
             $nav_items = array (
-                "Home"=>"home.php",
+                "Home"=>"index.php",
                 "About"=>"about.php",
                 "Contact"=>"contact.php",
                 "Blog"=>"blog.php"
