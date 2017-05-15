@@ -1,27 +1,29 @@
 <?php
     session_start();
-    require('includes/config.php'); 
-    require_once('includes/config.php');
-    include 'includes/header.php';
-    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    $id = $_GET['id'];
-    $result = $mysqli->query("SELECT postID, postTitle, postCont, postDate FROM blog_posts WHERE postID = $id");
-
-    $row = $result->fetch_assoc();
-    //if post does not exists redirect user.
-    if($row['postID'] == ''){
-        header('Location: ./');
-        exit;
-    }
 ?>
-<!--some code adapted from https://github.com/daveismyname/simple-blog-part-1-build-->
 <!DOCTYPE html>
+<!--some code adapted from https://github.com/daveismyname/simple-blog-part-1-build-->
 <html lang="en">
     <head>
 
         <meta charset="utf-8">
         <title>Blog - <?php echo $row['postTitle'];?></title>
         <link rel="stylesheet" href="styles/blog.css">
+        <?php
+        require('includes/config.php'); 
+        require_once('includes/config.php');
+        include 'includes/header.php';
+        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $id = $_GET['id'];
+        $result = $mysqli->query("SELECT postID, postTitle, postCont, postDate FROM blog_posts WHERE postID = $id");
+
+        $row = $result->fetch_assoc();
+        //if post does not exists redirect user.
+        if($row['postID'] == ''){
+            header('Location: ./');
+        exit;
+        }
+        ?>
 <!--
         <link rel="stylesheet" href="style/normalize.css">
         <link rel="stylesheet" href="style/main.css">

@@ -56,15 +56,15 @@
                 <h4>Enter your contact info for the lastest schmoozing tips!</h4>
                 <div class="field">
                     <label>Name</label>
-                    <input name="name" id="name_field" placeholder="Enter Your Name" required>*
+                    <input name="name" id="list_name_field" placeholder="Enter Your Name" required>*
                 </div>
                 <div class="field">
                     <label>Email</label>
-                    <input name="email" id="email_field" type="email" placeholder="Enter Your Email" required>*
+                    <input name="email" id="list_email_field" type="email" placeholder="Enter Your Email" required>*
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
-                    <input name="phone" id="phone_field" type="text" placeholder="(Optional)">
+                    <input name="phone" id="list_phone_field" type="text" placeholder="(Optional)">
                 </div>
                 <div class="field">
                     <label>Message:</label>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="field">
                     
-                <input id="submit" name="submit" type="submit" value="Submit"> 
+                <input id="list_submit" name="submit" type="submit" value="Submit"> 
                 </div>
             </form>
             </div> <!-- end of second form -->
