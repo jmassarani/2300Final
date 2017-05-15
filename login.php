@@ -96,27 +96,27 @@
             <form method="post" action="login.php">
                 <div class="field">
                     <label>First Name:</label>
-                    <input type="text" name="fname">
+                    <input type="text" name="fname" required>
                 </div>
                 <div class="field">
                     <label>Last Name:</label>
-                    <input type="text" name="lname">
+                    <input type="text" name="lname" required>
                 </div>
                 <div class="field">
                     <label>Email:</label>
-                    <input type="text" name="email">
+                    <input type="text" name = "email" required>
                 </div>
                 <div class="field">
                     <label>Username:</label>
-                    <input type="text" name="username">
+                    <input type="text" name="username" required>
                 </div>
                 <div class="field">
                     <label>Password:</label>
-                    <input type="password" name="password1">
+                    <input type="password" name="password1" pattern=".{8,}"   required title="8 characters minimum">
                 </div>
                 <div class="field">
                     <label>Repeat Password:</label>
-                    <input type="password" name="password2">
+                    <input type="password" name="password2" >
                 </div>
                 <input type="submit" name="createnew" value="Create Account">
 
