@@ -79,5 +79,7 @@
                 <embed class="col-xs-12 resume" src="Resume.pdf">
             </div>
         </div> <!--end of container div-->
+        <footer>
+        </footer>
 	</body>
 </html>

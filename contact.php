@@ -78,6 +78,9 @@
             </form>
             </div> <!-- end of second form -->
         </div> <!-- end of container div -->
+        
+        <footer>
+        </footer>
     </body>
 
     
