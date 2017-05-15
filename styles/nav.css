@@ -67,8 +67,10 @@ nav li {
 
 nav li {
     display: inline-block;
+/*
     padding-left: 1em;
     padding-right: 1em;
+*/
 }
 
 header {

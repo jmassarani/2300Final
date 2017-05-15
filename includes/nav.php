@@ -6,8 +6,9 @@
             $nav_items = array (
                 "Home"=>"index.php",
                 "About"=>"about.php",
-                "Contact"=>"contact.php",
-                "Blog"=>"blog.php"
+                "Contact Us"=>"contact.php",
+                "Blog"=>"blog.php",
+                "What We Do"=>"more.php"
             );
 
             function printLink ($title, $link) {
@@ -52,11 +53,11 @@
 ////                echo "' href='login.php'>Login</a></li>";
 //            }
             // More: Dropdown Menu
-            print ("<li class='dropdown");
-            if ($GLOBALS["current_page"] == 'What is Schmooze?') {
-                echo " active";
-            } 
-            print ("'>More</a><div class='dropdown-content'><a href='more.php'>What is Schmooze?</a></div></li>");
+//            print ("<li class='dropdown");
+//            if ($GLOBALS["current_page"] == 'What is Schmooze?') {
+//                echo " active";
+//            } 
+//            print ("'>More</a><div class='dropdown-content'><a href='more.php'>What is Schmooze?</a></div></li>");
             // Login/Logout Navigation
             if (isset($_SESSION['logged_user_by_sql'])) {
                 echo "<li><a class='logout_button";
