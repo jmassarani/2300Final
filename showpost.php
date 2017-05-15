@@ -37,15 +37,52 @@
             <p><a href="blog.php">Return To Blog Home</a></p>
 
 
-            <?php	
+            <?php
+                //echo full blog post
                 echo '<div>';
                     echo '<h1>'.$row['postTitle'].'</h1>';
                     echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
-                    echo '<p>'.$row['postCont'].'</p>';	echo '<p>'.$id.'</p';
-                    echo '<br>';
+                    echo '<p>'.$row['postCont'].'</p>';
                 
                 echo '</div>';
         
+                //comments div
+                echo '<div>';
+                    echo '<h3>Comments</h3>';
+                    if (isset($_SESSION['logged_user_by_sql'])) {
+                        echo "Add a comment:";
+                        echo '<form name="comment_form" method="post">';
+                        echo '<textarea name="comment"></textarea>';
+                        echo '<br>';
+                        echo 'What name would you like to appear with your comment?';
+                        echo '<br>';
+                        echo '<input name="nickname" type="text">';
+                        echo '<br>';
+                        echo '<input id="submit" name="submit" type="submit"value="Submit">';
+                        echo '</form>';
+                        
+                        if(isset($_POST['submit'])){
+                            //define comment variables
+                            $nickname=$_POST['nickname'];
+                            $comment = $_POST['comment'];
+                            $date = date("Y-m-d H:i:s");
+
+                            //add comment to database
+                            $mysqli->query("INSERT INTO `comments` (`commentID`, `postID`, `date_time`, `contents`, `nickname`) VALUES (NULL, '$id', '$date', '$comment', '$nickname');");
+                        }
+                    }
+                    else {
+                        echo "Please <a href='login.php'>log in</a> to add a comment.";
+                    }
+        
+                    //show all current comments
+                    $comment_result = $mysqli->query("SELECT * FROM comments WHERE postID = $id");
+                    while($comment_row = $comment_result->fetch_assoc()){
+                    echo '<h4>'.$comment_row['nickname'].'</h4>';
+                    echo $comment_row['date_time'];
+                    echo '<p>'.$comment_row['contents'].'</p>';
+                    }
+                echo '</div>';//end of comments div
         
             ?>
             

@@ -28,7 +28,7 @@
                 if (isset($_POST['logout'])) {
                     unset($_SESSION['logged_user_by_sql']);
                     session_destroy();
-                    header("Location: home.php");
+                    header("Location: index.php");
                 }
             ?>
         </div>

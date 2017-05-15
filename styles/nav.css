@@ -6,7 +6,7 @@
 }
 
 #nav_bar {
-    background-color: white;
+    background-color: #fff;
 }
 
 nav ul {
@@ -35,7 +35,7 @@ nav li {
  
 nav a, nav .dropdown {
     text-decoration: none;
-    color: ghostwhite;
+    color: #f8f8ff;
     display: block;
     transition: .3s background-color;
 }
@@ -43,15 +43,15 @@ nav a, nav .dropdown {
 nav a:hover, nav a:focus, nav .dropdown:hover, nav .dropdown:focus {
     text-decoration: none;
     font-weight: bold;
-    color: ghostwhite;
-    background-color: darkgray;
+    color: #f8f8ff;
+    background-color: #a9a9a9;
 }
  
 nav a.active, nav .dropdown.active {
     text-decoration: none;
     font-weight: bold;
-    background-color:darkgray;
-    color: ghostwhite;
+    background-color: #a9a9a9;
+    color: #f8f8ff;
     cursor: default;
 }
  
@@ -90,7 +90,7 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    color: ghostwhite;
+    color: #f8f8ff;
     padding: 0 10px;
     text-decoration: none;
     display: block;
