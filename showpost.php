@@ -44,10 +44,14 @@
                 echo '<div>';
                     echo '<h1>'.$row['postTitle'].'</h1>';
                     echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
-                    echo '<p>'.$row['postCont'].'</p>';				
+                    echo '<p>'.$row['postCont'].'</p>';	echo '<p>'.$id.'</p';
+                    echo '<br>';
+                
                 echo '</div>';
+        
+        
             ?>
-
+            
         </div>
 
     </body>

@@ -26,6 +26,12 @@
         ?>
         <div id="wrapper" class="container blog">
             <div class="col-sm-3">
+            <?php
+                if (isset($_SESSION['logged_user_by_sql'])) {
+                    echo "<form method='post' action='addpost.php'><input type='submit' name='add' value='Add Post'></form>";
+                    echo "<form method='post' action='removepost.php'><input type='submit' name='remove' value='Remove Post'></form>";
+                }
+            ?>
                 <h1>Blog Posts</h1>
                 <ul>
                     <?php
@@ -50,6 +56,7 @@
                             
                             echo '<p>'.$row['postDesc'].'</p>';				
                             echo '<p><a href="showpost.php?id='.$row['postID'].'">Read More</a></p>';		
+                            
                             echo '</div>';
                         }
                     } catch(PDOException $e) {
