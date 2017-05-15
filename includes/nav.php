@@ -1,6 +1,7 @@
 <!--<script src="../js/navbar.js"></script>-->
 <nav id="nav_bar">
     <ul>
+        <img src="images/header-white.png" alt="Logo">
         <?php
             $nav_items = array (
                 "Home"=>"index.php",

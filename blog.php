@@ -16,9 +16,6 @@
 	</head>
 
 	<body>
-        <header>
-            <img src="images/Logo.png" alt="Logo">
-        </header>
         <?php
             global $current_page;
             $current_page = "Blog";
