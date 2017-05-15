@@ -19,6 +19,14 @@ body {
   flex-direction: column;
 }
 
+a {
+    color: #800080;
+}
+
+a:hover, a:focus {
+    color: #800080;
+}
+
 .container {
   flex: 1;
 }

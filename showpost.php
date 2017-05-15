@@ -50,6 +50,8 @@
                 echo '<div>';
                     echo '<h3>Comments</h3>';
                     if (isset($_SESSION['logged_user_by_sql'])) {
+                        //TODO: show this button only if user is an admin
+                        echo "<form method='post' action='removecomment.php?id=$id'><input type='submit' name='removecomment' value='Remove A Comment'></form>";
                         echo "Add a comment:";
                         echo '<form name="comment_form" method="post">';
                         echo '<textarea name="comment"></textarea>';
@@ -76,12 +78,21 @@
                     }
         
                     //show all current comments
-                    $comment_result = $mysqli->query("SELECT * FROM comments WHERE postID = $id");
+                    $comment_result = $mysqli->query("SELECT * FROM comments WHERE postID = $id ORDER BY date_time DESC");
                     while($comment_row = $comment_result->fetch_assoc()){
                     echo '<h4>'.$comment_row['nickname'].'</h4>';
                     echo $comment_row['date_time'];
                     echo '<p>'.$comment_row['contents'].'</p>';
                     }
+                        
+//                    //comment delete button
+//                    echo '<form name="delete_form_"'.$comment_row['commentID'].' method="post">';
+//                    echo '<input id="delete" name="delete_"'.$comment_row['commentID'].' type="submit" value="Delete">';
+//                    echo '</form>';
+//                    }
+//                    if(isset($_POST['delete_'.$comment])) {
+//                        echo 'hello';
+//                    }
                 echo '</div>';//end of comments div
         
             ?>
