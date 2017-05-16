@@ -22,10 +22,28 @@
         <div class="container">
             <h3>schmooze |SHmo͞oz|</h3> 
             <h5>(also shmooze) Verb [no obj.] </h5>
-            <p>Talk cozily in a friendly comfortable manner, getting to know the other person or people with an ultimate goal to impress and create communication and authentic relationships. </p>
-            <h3>Why hire a Schmoozer for your project, event, as an extra hands on fundraiser, organizer, sales person, socializer, product tester, pr professional, project extra?</h3>
+            <p>Talk cozily in a friendly comfortable manner, getting to know other people with an ultimate goal to impress and create communication and authentic relationships. </p>
+            <div class="col-xs-12">
+            <h2>When do I need a schmoozer or two?</h2>
+                Schmoozers are perfect for:
+                <ul>
+                    <li>An important business event that requires entertaining</li>
+                    <li>An important dinner party, where you want to make sure there is a comfortable flow of lively conversation</li>
+                    <li>A special event that needs planning, tweaking, music, a mood, or theme</li>
+                    <li>Launching a new product with  assistance needed at the demo</li>
+                    <li>Interacting with media, customers, potential customers, investors, and potential investors on your behalf</li>
+                    <li>Helping you reach a goal when you're short on staff</li>
+                    <li>Setting up a press conference</li>
+                    <li>When you're coming down to the wire on a special event and need a few extra hands</li>
+                    <li>Serving as extra staff at a trade show</li>
+                    <li>Providing lively conversation to break the ice at an important business dinner</li>
+                    <li>Providing some more feet on the ground at a networking event</li>
+                    <li>Helping a brilliant techie translate their great ideas into clear concepts</li>
+                </ul>
+            </div> <!-- end of col-xs-12 div-->
+            <h2>Why hire a Schmoozer?</h2>
             <ul> 
-                <li>Do you notice that when you break bread with an acquaintance that you’re paving the way to creating true friendship?</li>
+                <li>Do you notice that when you break bread with an acquaintance, you’re paving the way to creating true friendship?</li>
                 <li>Have you ever been in an airport or waiting for an appointment and met someone after speaking for a while you learned from, and felt grateful you had by chance met?</li>
                 <li>Are you stuck on a project at work and need some creative input on how to pull the event or launch together by making it truly memorable?</li>
                 <li>Have you attended awards dinners, special events, conferences and had a hard time “getting started” to mix and meet people in the crowd?</li>
