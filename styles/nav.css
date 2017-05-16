@@ -6,7 +6,7 @@
 }
 
 #nav_bar {
-    background-color: #fff;
+    background-color: #888;
 }
 
 nav ul {
@@ -16,12 +16,22 @@ nav ul {
     margin: 0;
 }
 
+nav img {
+    float: left;
+    clear: both;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: #888;
+}
+
+/*
 nav ul li:first-child {
     display: flex;
     float: left;
     clear: both;
     padding: 5px;
 }
+*/
 
 nav a, nav .dropdown {
     text-decoration: none;
@@ -95,9 +105,58 @@ li.dropdown {
     display: block;
 }
 
+.hamburger{
+    background:none;
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:50px;
+    padding:0 15px;
+    color:#fff;
+    border:0;
+    font-size:1.4em;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:100;
+    display: none;
+    visibility: none;
+}
+.cross{
+    background:none;
+    position:absolute;
+    top:0;
+    right:0;
+    padding:0 15px;
+    color:#fff;
+    border:0;
+    font-size:3em;
+    line-height:50px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:100;
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 920px){
+    nav li {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    nav ul {
+        padding: 0;
+    }
+    .cross {
+        display: block;
+        visibility: visible;
+    }
+}
 
 @media screen and (max-width: 600px){
-    nav li, nav ul li:first-child {
+    nav li {
         display: inline-block;
         width: 100%;
     }
