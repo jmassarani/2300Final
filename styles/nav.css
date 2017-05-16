@@ -141,6 +141,7 @@ li.dropdown {
 }
 
 .menu {
+    width: 100%;
     display: block;
 }
 
