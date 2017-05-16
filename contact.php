@@ -62,7 +62,7 @@
                 $name = filter_input(INPUT_POST,'name', FILTER_SANITIZE_STRING);
                 $email = filter_input(INPUT_POST,'email', FILTER_SANITIZE_EMAIL);
                 $phone = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_NUMBER_INT);
-                $message = filter_input(INPUT_POST,'message', FILTER_SANITIZE_URL);
+                $message = filter_input(INPUT_POST,'message', FILTER_SANITIZE_SPECIAL_CHARS);
 
                 //format email to be sent
                 $full_message = "Hello! You have a new message from queenofschmooze.com. A user has submitted the following information:\n\nName: $name\n\nEmail address: $email\n\nPhone number: $phone\n\nMessage:\n$message";
