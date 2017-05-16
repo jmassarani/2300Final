@@ -24,15 +24,6 @@ nav img {
     background-color: #888;
 }
 
-/*
-nav ul li:first-child {
-    display: flex;
-    float: left;
-    clear: both;
-    padding: 5px;
-}
-*/
-
 nav a, nav .dropdown {
     text-decoration: none;
     color: #fff;

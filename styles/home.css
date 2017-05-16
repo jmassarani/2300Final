@@ -25,13 +25,3 @@
 #home_text {
     text-align: center;
 }
-
-/*
-@media screen and (max-width: 699px) {
-    .container {
-        display: block;
-    }
-    .home {
-        max-width: 100%;
-    }  
-}*/
