@@ -1,9 +1,9 @@
 .blog a {
-    color: #8383c3;
+    color: #666694;
 }
 
 .blog a:hover, .blog a:focus {
-    color: #6c6cb3;
+    color: #4b4b75;
 }
 
 .blog form {

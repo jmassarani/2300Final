@@ -30,11 +30,11 @@ body {
 }
 
 a {
-    color: #8383c3;
+    color: #666694;
 }
 
 a:hover, a:focus {
-    color: #6c6cb3;
+    color: #4b4b75;
     text-decoration: none;
 }
 
