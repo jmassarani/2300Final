@@ -39,7 +39,7 @@
 
             <?php
                 //echo full blog post
-                echo '<div>';
+                echo '<div class="col-xs-9">';
                     echo '<h1>'.$row['postTitle'].'</h1>';
                     echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
                     echo '<p>'.$row['postCont'].'</p>';
@@ -49,9 +49,12 @@
                 //comments div
                 echo '<div class="col-sm-6">';
                     echo '<h3>Comments</h3>';
-                    if (isset($_SESSION['logged_user_by_sql'])) {
-                        //TODO: show this button only if user is an admin
+                    if (isset($_SESSION['logged_user_by_sql']) || isset($_SESSION['admin'])) {
+                        //show remove comments button only if user is an admin
+                        if(isset($_SESSION['admin'])){
                         echo "<div class='field'><form method='post' action='removecomment.php?id=$id'><input class='button' type='submit' name='removecomment' value='Remove A Comment'></form></div>";
+                        }
+                        //show add comments form for all logged in users
                         echo "<div class='field'> <p> Add a comment: </p>";
                         echo '<form name="comment_form" method="post">';
                         echo '<textarea name="comment"></textarea> </div>';
@@ -70,7 +73,7 @@
                             //add comment to database
                             $mysqli->query("INSERT INTO `comments` (`commentID`, `postID`, `date_time`, `contents`, `nickname`) VALUES (NULL, '$id', '$date', '$comment', '$nickname');");
                         }
-                    }
+                    } // end if user is logged in
                     else {
                         echo "<p> Please <a href='login.php'>log in</a> to add a comment.</p>";
                     }

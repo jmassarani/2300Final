@@ -24,7 +24,7 @@
                 printLink ($title, $link);
             }
             // Login/Logout Navigation
-            if (isset($_SESSION['logged_user_by_sql'])) {
+            if (isset($_SESSION['logged_user_by_sql']) || isset($_SESSION['admin'])) {
                 echo "<li><a class='logout_button";
                 if ($GLOBALS["current_page"] == 'Logout') {
                     echo " active";
