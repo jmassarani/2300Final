@@ -1,4 +1,3 @@
-<!--<script src="../js/navbar.js"></script>-->
 <nav id="nav_bar" class="navbar-fixed">
     <img src="images/header-white.png" id="header_image" alt="Logo">
     <ul class="menu">

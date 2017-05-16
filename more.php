@@ -22,7 +22,7 @@
         <div class="container">
             <h3>schmooze |SHmo͞oz|</h3> 
             <h5>(also shmooze) Verb [no obj.] </h5>
-            <p>Talk cozily in a friendly comfortable manner, getting to know other people with an ultimate goal to impress and create communication and authentic relationships. </p>
+            <p>To talk cozily in a friendly and comfortable manner, getting to know other people with an ultimate goal to impress, communicate, and create authentic relationships. </p>
             <div class="col-xs-12">
             <h2>When do I need a schmoozer or two?</h2>
                 Schmoozers are perfect for:

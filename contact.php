@@ -67,9 +67,7 @@
                 //format email to be sent
                 $full_message = "Hello! You have a new message from queenofschmooze.com. A user has submitted the following information:\n\nName: $name\n\nEmail address: $email\n\nPhone number: $phone\n\nMessage:\n$message";
                 
-                //send email to company
-//                mail(CONTACT_EMAIL, "Queen of Schmooze Message from $name", $full_message);
-                
+                //send email to company                
                 if(mail(CONTACT_EMAIL, "Queen of Schmooze Message from $name", $full_message)) {
                     echo "Your message has been sent!";
                 } else{
