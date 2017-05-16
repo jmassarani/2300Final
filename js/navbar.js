@@ -2,7 +2,7 @@ window.onload = function () {
     function checkWidth(init)
     {
         /*If browser resized, check width again */
-        if ($(window).width() <= 915) {
+        if ($(window).width() <= 920) {
             
             if (!init) {
                 $('.menu').css("display", "none");
