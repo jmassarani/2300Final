@@ -79,12 +79,15 @@
                         echo "Please <a href='login.php'>log in</a> to add a comment.";
                     }
         
-                    //show all current comments
+                    
                     $comment_result = $mysqli->query("SELECT * FROM comments WHERE postID = $id ORDER BY date_time DESC");
-                    while($comment_row = $comment_result->fetch_assoc()){
-                    echo '<h4>'.$comment_row['nickname'].'</h4>';
-                    echo $comment_row['date_time'];
-                    echo '<p>'.$comment_row['contents'].'</p>';
+                    //show all current comments if there are any
+                    if(mysqli_num_rows($comment_result)) {
+                        while($comment_row = $comment_result->fetch_assoc()){
+                        echo '<h4>'.$comment_row['nickname'].'</h4>';
+                        echo $comment_row['date_time'];
+                        echo '<p>'.$comment_row['contents'].'</p>';
+                    }
                     }
                 echo '</div>';//end of comments div
         
