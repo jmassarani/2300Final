@@ -67,7 +67,6 @@
                             //define comment variables
                             $nickname = filter_input(INPUT_POST,'nickname', FILTER_SANITIZE_STRING);
                             $comment = filter_input(INPUT_POST, 'comment', FILTER_SANITIZE_SPECIAL_CHARS);
-                            echo "comment is $comment";
                             $date = date("Y-m-d H:i:s");
 
                             //add comment to database
