@@ -59,7 +59,7 @@
                         while($row = $sql->fetch_assoc()){
                             echo '<div>';
                             
-                            echo '<h1 id='.$row['postID'].'><a href="showpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h1>';
+                            echo '<h1 class="blog-post" id='.$row['postID'].'><a href="showpost.php?id='.$row['postID'].'">'.$row['postTitle'].'</a></h1>';
                             
                             echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['postDate'])).'</p>';
                             
@@ -80,6 +80,7 @@
         </div>
         
         <footer>
+            <h4 class="foot-container"><a href="#wrapper">Back to Top</a></h4>
         </footer>
 	</body>
 </html>

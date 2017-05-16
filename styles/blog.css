@@ -21,3 +21,8 @@
 .add-delete form {
     margin: 15px;
 }
+
+.blog .blog-post {
+    padding-top: 50px;
+    margin-top: -35px;
+}
