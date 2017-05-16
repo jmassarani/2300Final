@@ -21,7 +21,7 @@ body {
 }
 
 a {
-    color: #9f9fde;
+    color: #8383c3;
 }
 
 a:hover, a:focus {
@@ -32,4 +32,8 @@ a:hover, a:focus {
 .container {
     flex: 1;
     margin-top: 75px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #565656;
 }

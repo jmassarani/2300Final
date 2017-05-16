@@ -52,10 +52,10 @@
                     if (isset($_SESSION['logged_user_by_sql'])) {
                         //TODO: show this button only if user is an admin
                         echo "<div class='field'><form method='post' action='removecomment.php?id=$id'><input class='button' type='submit' name='removecomment' value='Remove A Comment'></form></div>";
-                        echo "<div class='field'> Add a comment:";
+                        echo "<div class='field'> <p> Add a comment: </p>";
                         echo '<form name="comment_form" method="post">';
                         echo '<textarea name="comment"></textarea> </div>';
-                        echo '<div class="field"> What name would you like to appear with your comment?';
+                        echo '<div class="field"> <p> What name would you like to appear with your comment? </p>';
                         echo '<input name="nickname" type="text"> </div>';
                         echo '<div class="field"> <input class="button" id="submit" name="submit" type="submit"value="Submit"> </div>';
                         echo '</form>';
@@ -72,7 +72,7 @@
                         }
                     }
                     else {
-                        echo "Please <a href='login.php'>log in</a> to add a comment.";
+                        echo "<p> Please <a href='login.php'>log in</a> to add a comment.</p>";
                     }
         
                     
@@ -81,7 +81,7 @@
                     if(mysqli_num_rows($comment_result)) {
                         while($comment_row = $comment_result->fetch_assoc()){
                         echo '<h4>'.$comment_row['nickname'].'</h4>';
-                        echo $comment_row['date_time'];
+                        echo '<p>'.$comment_row['date_time'].'</p>';
                         echo '<p>'.$comment_row['contents'].'</p>';
                     }
                     }

@@ -56,7 +56,10 @@
                             
                             echo '<p>Posted on '.date('jS M Y H:i:s', strtotime($row['postDate'])).'</p>';
                             
-                            echo $row['postDesc'];				
+                            echo '<p>';
+                            echo $row['postDesc'];	
+                            echo '</p>';
+                            
                             echo '<p><a href="showpost.php?id='.$row['postID'].'">Read More</a></p>';		
                             
                             echo '</div>';

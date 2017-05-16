@@ -27,7 +27,7 @@
 		<title>Remove Comment</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
-        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/form.css">
         <?php 
             require_once('includes/config.php');
             include 'includes/header.php';
@@ -40,7 +40,7 @@
             $current_page = "Blog";
             include "includes/nav.php"
         ?>
-        <div id="remove">
+        <div id="remove" class="container">
         <h1>Remove A Comment</h1>
         <form method="post">
         <?php
@@ -52,12 +52,12 @@
             $comment_id = $row['commentID'];
             $nickname = $row['nickname'];
 
-            echo "<input type='checkbox' name='option[]' value='$comment_id'>$nickname: \"$contents\"<br>";
+            echo "<p><input type='checkbox' name='option[]' value='$comment_id'>$nickname: \"$contents\"</p>";
         }
         echo '</div>';
         
         ?>
-        <input type="submit" name="remove" value="Remove Comment"></form>
+        <input class="button" type="submit" name="remove" value="Remove Comment"></form>
         <?php
         echo '<br><a href="showpost.php?id='.$id.'">Return to Post</a><br>';
         ?>

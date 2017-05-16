@@ -53,7 +53,7 @@
             $blog_title = $row['postTitle'];
             $blog_id = $row['postID'];
 
-            echo "<input type='checkbox' name='option[]' value='$blog_id'>$blog_title<br>";
+            echo "<p><input type='checkbox' name='option[]' value='$blog_id'>$blog_title</p>";
         }
         echo '</div>';
         
