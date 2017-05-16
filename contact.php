@@ -19,7 +19,7 @@
     <body class = "contact">
         <?php
             global $current_page;
-            $current_page = "Contact";
+            $current_page = "Contact Us";
             include "includes/nav.php"
         ?>
         <div class="container">
@@ -28,12 +28,12 @@
                 <h2>How can we help you connect?</h2>
                 <h4>In need of a Schmoozer? Send us a message!</h4>
                 <div class="field">
-                    <label>Name</label>
-                    <input name="name" id="name_field" placeholder="Enter Your Name" required>*
+                    <label>Name *</label>
+                    <input name="name" id="name_field" placeholder="Enter Your Name" required>
                 </div>
                 <div class="field">
-                    <label>Email</label>
-                    <input name="email" id="email_field" type="email" placeholder="Enter Your Email" required>*
+                    <label>Email *</label>
+                    <input name="email" id="email_field" type="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="field">
                     
-                <input id="submit" name="submit" type="submit" value="Submit"> 
+                <input id="submit" class="button" name="submit" type="submit" value="Submit"> 
                 </div>
             </form>
             
@@ -62,7 +62,7 @@
                 $name = filter_input(INPUT_POST,'name', FILTER_SANITIZE_STRING);
                 $email = filter_input(INPUT_POST,'email', FILTER_SANITIZE_EMAIL);
                 $phone = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_NUMBER_INT);
-                $message = filter_input(INPUT_POST,'message', FILTER_SANITIZE_URL);
+                $message = filter_input(INPUT_POST,'message', FILTER_SANITIZE_SPECIAL_CHARS);
 
                 //format email to be sent
                 $full_message = "Hello! You have a new message from queenofschmooze.com. A user has submitted the following information:\n\nName: $name\n\nEmail address: $email\n\nPhone number: $phone\n\nMessage:\n$message";
@@ -85,25 +85,42 @@
                 <h2>Join our mailing list!</h2>
                 <h4>Enter your contact info for the lastest schmoozing tips!</h4>
                 <div class="field">
+<<<<<<< HEAD
                     <label>Name</label>
                     <input name="name1" id="list_name_field" placeholder="Enter Your Name" required>*
                 </div>
                 <div class="field">
                     <label>Email</label>
                     <input name="email1" id="list_email_field" type="email" placeholder="Enter Your Email" required>*
+=======
+                    <label>Name *</label>
+                    <input name="name" id="list_name_field" placeholder="Enter Your Name" required>
+                </div>
+                <div class="field">
+                    <label>Email *</label>
+                    <input name="email" id="list_email_field" type="email" placeholder="Enter Your Email" required>
+>>>>>>> d9a9e57277b6664a0d3c31a5a3376d68ea260d0c
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
-                    <input name="phone1" id="list_phone_field" type="text" placeholder="(Optional)"> Format XXXXXXXXXX
+                    <input name="phone1" id="list_phone_field" type="text" placeholder="(Optional)">
                 </div>
                 <div class="field">
                     <label>Message:</label>
+<<<<<<< HEAD
                     <br>
                     <textarea name="message1" placeholder="Type Here"></textarea>
                 </div>
                 <div class="field">
                     
                 <input id="list_submit" name="submit1" type="submit" value="Submit"> 
+=======
+                    <textarea name="message" placeholder="Type Here" required></textarea>
+                </div>
+                <div class="field">
+                    
+                <input id="list_submit" class="button" name="submit" type="submit" value="Submit"> 
+>>>>>>> d9a9e57277b6664a0d3c31a5a3376d68ea260d0c
                 </div>
             </form>
                 

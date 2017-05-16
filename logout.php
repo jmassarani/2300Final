@@ -22,7 +22,7 @@
         <div class="container log_out">
             <form method="post">
                 <p>Already signed in, want to log out?</p>
-                <input type="submit" name="logout" value="Log Out">
+                <input type="submit" class="button" name="logout" value="Log Out">
             </form>
             <?php
                 if (isset($_POST['logout'])) {

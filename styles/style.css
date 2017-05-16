@@ -7,6 +7,7 @@ footer {
     width: 100%;
     height: 275px;
     background-image:url(../images/networking.png);
+    /*    image found on: https://blog.goldenkey.org/2016/10/11/networking-your-way-to-the-top-five-keys-to-success/*/
 }
 
 html {
@@ -28,5 +29,6 @@ a:hover, a:focus {
 }
 
 .container {
-  flex: 1;
+    flex: 1;
+    margin-top: 50px;
 }

@@ -35,7 +35,7 @@
 
             if ( empty( $post_username ) || empty( $post_password ) ) {
             ?>
-            <div class="log_in">
+            <div class="log_in col-sm-6">
                 <h2>Log In</h2>
                 <form action="login.php" method="post">
                     <div class="field">
@@ -46,7 +46,9 @@
                         <label>Password: </label>
                         <input type="password" name="password" required>
                     </div>
-                        <input type="submit" value="Submit">
+                    <div class="field">
+                        <input type="submit" class="button" value="Submit">
+                    </div>
                 </form>
             </div>
 
@@ -96,7 +98,7 @@
             ?>
             
             
-            <div class="create_user">
+            <div class="create_user col-sm-6">
             <h2>Are you new to this site and want to create an account?</h2>
             <form method="post" action="login.php" id = "registration">
                 <div class="field">
@@ -124,7 +126,9 @@
                     <label>Repeat Password:</label>
                     <input type="password" name="password" data-validation="confirmation" >
                 </div>
-                <input type="submit" name="createnew" value="Create Account">
+                <div class="field">
+                    <input type="submit" class="button" name="createnew" value="Create Account">
+                </div>
 
             </form>
                 <script> 
