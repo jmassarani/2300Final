@@ -47,7 +47,7 @@
                         <input type="password" name="password" required>
                     </div>
                     <div class="field">
-                        <input type="submit" class="button" value="Submit">
+                        <input type="submit" class="button" value="Submit" name = "login">
                     </div>
                 </form>
             </div>
@@ -86,10 +86,11 @@
                         echo "</div>";
                     }
                     else {
+                        if (!isset($_POST["createnew"])){
                         echo "<div class='box3'>";
                         echo "<p>You did not login successfully.</p>";
                         echo "<p>Please <a href='login.php'>try again</a></p>";
-                        echo "</div>";
+                        echo "</div>";}
 
                     }
     //            $hashed_password = password_hash("schmooze", PASSWORD_DEFAULT) . '<br>';
@@ -202,10 +203,11 @@
                         if ($flag == true) {
                             //hash password
 //                            $hashed = password_hash($p1, PASSWORD_DEFAULT);
-                            $hashed = password_hash($p1, PASSWORD_DEFAULT) . '<br>';
+                            $hashed = password_hash($p1, PASSWORD_DEFAULT);
                             
                             $add_user = $mysqli->query("INSERT INTO users(firstname,lastname,email,username,hashpassword,privilege) VALUES ('$fname','$lname','$email','$username','$hashed','viewer')");
                             echo "<p>Your account has been created</p>";
+                            echo "<p>Please <a href='login.php'>login here</a></p>";
                         }
                     }
                     
