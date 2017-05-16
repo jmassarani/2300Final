@@ -7,7 +7,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Blog - <?php echo $row['postTitle'];?></title>
+        <title>Blog</title>
         <link rel="stylesheet" href="styles/blog.css">
         <link rel="stylesheet" href="styles/form.css">
         <?php
