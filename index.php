@@ -21,8 +21,9 @@
             include "includes/nav.php"
         ?>
         <div class="container flex body-margin">
-            <div class="col-xs-12">
-                <h2>You're a great organization with great ideas. Do you want to show it? Why leave things to chance? Sometimes an extra push is needed!</h2>
+            <div class="col-xs-12" id="home_text">
+                <h1>Queen of Schmooze</h1>
+                <h2>You're a great organization with great ideas. Why leave things to chance? Sometimes an extra push is needed!</h2>
                 <p>One of our biggest challenges is how to connect with one another in a genuine way.  We are here to help you to make this happen. </p>
             </div> 
             <img class="col-xs-12" src="images/networking2.jpg" alt="homepage">
