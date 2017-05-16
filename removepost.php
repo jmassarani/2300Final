@@ -27,7 +27,7 @@
 		<title>Remove Post</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
-        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/form.css">
         <?php 
             require_once('includes/config.php');
             include 'includes/header.php';
@@ -40,7 +40,9 @@
             $current_page = "Blog";
             include "includes/nav.php"
         ?>
-        <div id="remove">
+        <div id="remove" class="container">
+            <p><a href="blog.php">Return To Blog Home</a></p>
+
         <h1>Remove Blog Posts</h1>
         <form method="post">
         <?php
@@ -56,7 +58,7 @@
         echo '</div>';
         
         ?>
-         <input type="submit" name="remove" value="Remove Blog Post"></form> 
+         <input class="button" type="submit" name="remove" value="Remove Blog Post"></form> 
             
         
         </div>

@@ -8,7 +8,7 @@
 		<title>Add Post</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
-        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/form.css">
         <?php 
             require_once('includes/config.php');
             include 'includes/header.php';
@@ -22,7 +22,9 @@
             include "includes/nav.php"
         ?>
         <div class="container">
-            <div class="home col-sm-6">
+            <div class="home col-sm-12">
+                <p><a href="blog.php">Return To Blog Home</a></p>
+
                 <form action="addpost.php" method="post">
                     <div class="field">
                         <label>Title:</label><br>
@@ -37,7 +39,7 @@
                         <textarea name="content" id="content_field" type="text" placeholder="Enter the Content for your blog post"></textarea>
                     </div>
                     <div class="field">
-                        <input id="submit" name="submit" type="submit" value="Submit"> 
+                        <input class="button" id="submit" name="submit" type="submit" value="Submit"> 
                     </div>
                 </form>
                 <?php
