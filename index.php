@@ -26,6 +26,7 @@
                 <p>One of our biggest challenges is how to connect with one another in a genuine way.  We are here to help you to make this happen. </p>
             </div> 
             <img class="col-xs-12" src="images/networking2.jpg" alt="homepage">
+            <!--            image can be found on: http://www.girisimcilerokulu.com/girisimciler-okulunun-en-populer-2015-yazisi/-->
        
         </div>
         <footer>
