@@ -86,15 +86,6 @@
                     echo $comment_row['date_time'];
                     echo '<p>'.$comment_row['contents'].'</p>';
                     }
-                        
-//                    //comment delete button
-//                    echo '<form name="delete_form_"'.$comment_row['commentID'].' method="post">';
-//                    echo '<input id="delete" name="delete_"'.$comment_row['commentID'].' type="submit" value="Delete">';
-//                    echo '</form>';
-//                    }
-//                    if(isset($_POST['delete_'.$comment])) {
-//                        echo 'hello';
-//                    }
                 echo '</div>';//end of comments div
         
             ?>

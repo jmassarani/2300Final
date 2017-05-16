@@ -49,7 +49,8 @@
                 <input id="submit" name="submit" type="submit" value="Submit"> 
                 </div>
             </form>
-             <?php
+            
+            <?php
             //write email to company
             if(isset($_POST['submit'])) {
                 //user info from form
@@ -57,14 +58,25 @@
                 $email = $_POST['email'];
                 $phone = $_POST['phone'];
                 $message = $_POST['message'];
+                
+                $name = filter_input(INPUT_POST,'name', FILTER_SANITIZE_STRING);
+                $email = filter_input(INPUT_POST,'email', FILTER_SANITIZE_EMAIL);
+                $phone = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_NUMBER_INT);
+                $message = filter_input(INPUT_POST,'message', FILTER_SANITIZE_URL);
+
                 //format email to be sent
                 $full_message = "Hello! You have a new message from queenofschmooze.com. A user has submitted the following information:\n\nName: $name\n\nEmail address: $email\n\nPhone number: $phone\n\nMessage:\n$message";
                 
                 //send email to company
                 mail(CONTACT_EMAIL, "Queen of Schmooze Message from $name", $full_message);
                 
-                echo "Your message has been sent!";
-            }
+                if(@mail(CONTACT_EMAIL, "Queen of Schmooze Message from $name", $full_message)) {
+                    echo "Your message has been sent!";
+                } else{
+                    echo "Sorry, your message could not be sent at this time.";
+                }
+                
+            } //end of if message submitted
             ?>
             </div> <!-- end of first form -->
             
@@ -100,13 +112,4 @@
         <footer>
         </footer>
     </body>
-
-    
-    <?php
-    $name = filter_input(INPUT_POST,'name');
-    $email = filter_input(INPUT_POST,'email');
-    $phone_number = filter_input(INPUT_POST,'phone');
-    $message = filter_input(INPUT_POST,'message');
-    
-    ?>
 </html>
