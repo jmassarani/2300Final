@@ -19,7 +19,7 @@
     <body class = "contact">
         <?php
             global $current_page;
-            $current_page = "Contact";
+            $current_page = "Contact Us";
             include "includes/nav.php"
         ?>
         <div class="container">
@@ -28,12 +28,12 @@
                 <h2>How can we help you connect?</h2>
                 <h4>In need of a Schmoozer? Send us a message!</h4>
                 <div class="field">
-                    <label>Name</label>
-                    <input name="name" id="name_field" placeholder="Enter Your Name" required>*
+                    <label>Name *</label>
+                    <input name="name" id="name_field" placeholder="Enter Your Name" required>
                 </div>
                 <div class="field">
-                    <label>Email</label>
-                    <input name="email" id="email_field" type="email" placeholder="Enter Your Email" required>*
+                    <label>Email *</label>
+                    <input name="email" id="email_field" type="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="field">
                     
-                <input id="submit" name="submit" type="submit" value="Submit"> 
+                <input id="submit" class="button" name="submit" type="submit" value="Submit"> 
                 </div>
             </form>
             
@@ -85,12 +85,12 @@
                 <h2>Join our mailing list!</h2>
                 <h4>Enter your contact info for the lastest schmoozing tips!</h4>
                 <div class="field">
-                    <label>Name</label>
-                    <input name="name" id="list_name_field" placeholder="Enter Your Name" required>*
+                    <label>Name *</label>
+                    <input name="name" id="list_name_field" placeholder="Enter Your Name" required>
                 </div>
                 <div class="field">
-                    <label>Email</label>
-                    <input name="email" id="list_email_field" type="email" placeholder="Enter Your Email" required>*
+                    <label>Email *</label>
+                    <input name="email" id="list_email_field" type="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
@@ -98,12 +98,11 @@
                 </div>
                 <div class="field">
                     <label>Message:</label>
-                    <br>
                     <textarea name="message" placeholder="Type Here" required></textarea>
                 </div>
                 <div class="field">
                     
-                <input id="list_submit" name="submit" type="submit" value="Submit"> 
+                <input id="list_submit" class="button" name="submit" type="submit" value="Submit"> 
                 </div>
             </form>
             </div> <!-- end of second form -->

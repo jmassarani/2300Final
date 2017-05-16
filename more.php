@@ -16,7 +16,7 @@
 	<body>
         <?php
             global $current_page;
-            $current_page = "What is Schmooze?";
+            $current_page = "What We Do";
             include "includes/nav.php"
         ?>
         <div class="container">
