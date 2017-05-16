@@ -21,11 +21,12 @@ body {
 }
 
 a {
-    color: #800080;
+    color: #9f9fde;
 }
 
 a:hover, a:focus {
-    color: #800080;
+    color: #6c6cb3;
+    text-decoration: none;
 }
 
 .container {

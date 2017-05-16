@@ -1,7 +1,23 @@
 .blog a {
-    color: #800080;
+    color: #9f9fde;
 }
 
 .blog a:hover, .blog a:focus {
-    color: #800080;
+    color: #6c6cb3;
+}
+
+.blog form {
+    margin: 0;
+}
+
+.side_nav {
+    margin: 10px;
+}
+
+.add-delete {
+    display: flex;
+}
+
+.add-delete form {
+    margin: 15px;
 }

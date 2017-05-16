@@ -9,6 +9,7 @@
         <meta charset="utf-8">
         <title>Blog - <?php echo $row['postTitle'];?></title>
         <link rel="stylesheet" href="styles/blog.css">
+        <link rel="stylesheet" href="styles/form.css">
         <?php
         require('includes/config.php'); 
         require_once('includes/config.php');
@@ -46,20 +47,17 @@
                 echo '</div>';
         
                 //comments div
-                echo '<div>';
+                echo '<div class="col-sm-6">';
                     echo '<h3>Comments</h3>';
                     if (isset($_SESSION['logged_user_by_sql'])) {
                         //TODO: show this button only if user is an admin
-                        echo "<form method='post' action='removecomment.php?id=$id'><input type='submit' name='removecomment' value='Remove A Comment'></form>";
-                        echo "Add a comment:";
+                        echo "<div class='field'><form method='post' action='removecomment.php?id=$id'><input class='button' type='submit' name='removecomment' value='Remove A Comment'></form></div>";
+                        echo "<div class='field'> Add a comment:";
                         echo '<form name="comment_form" method="post">';
-                        echo '<textarea name="comment"></textarea>';
-                        echo '<br>';
-                        echo 'What name would you like to appear with your comment?';
-                        echo '<br>';
-                        echo '<input name="nickname" type="text">';
-                        echo '<br>';
-                        echo '<input id="submit" name="submit" type="submit"value="Submit">';
+                        echo '<textarea name="comment"></textarea> </div>';
+                        echo '<div class="field"> What name would you like to appear with your comment?';
+                        echo '<input name="nickname" type="text"> </div>';
+                        echo '<div class="field"> <input class="button" id="submit" name="submit" type="submit"value="Submit"> </div>';
                         echo '</form>';
                         
                         if(isset($_POST['submit'])){
