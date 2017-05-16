@@ -157,18 +157,5 @@ li.dropdown {
     
     .menu {
         display: none;
-/*        visibility: hidden;*/
     }
 }
-/*
-
-@media screen and (max-width: 600px){
-    nav li {
-        display: inline-block;
-        width: 100%;
-    }
-    
-    nav ul {
-        padding: 0;
-    }
-}*/
