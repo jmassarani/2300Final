@@ -85,21 +85,12 @@
                 <h2>Join our mailing list!</h2>
                 <h4>Enter your contact info for the lastest schmoozing tips!</h4>
                 <div class="field">
-<<<<<<< HEAD
-                    <label>Name</label>
-                    <input name="name1" id="list_name_field" placeholder="Enter Your Name" required>*
-                </div>
-                <div class="field">
-                    <label>Email</label>
-                    <input name="email1" id="list_email_field" type="email" placeholder="Enter Your Email" required>*
-=======
                     <label>Name *</label>
-                    <input name="name" id="list_name_field" placeholder="Enter Your Name" required>
+                    <input name="name1" id="list_name_field" placeholder="Enter Your Name" required>
                 </div>
                 <div class="field">
                     <label>Email *</label>
-                    <input name="email" id="list_email_field" type="email" placeholder="Enter Your Email" required>
->>>>>>> d9a9e57277b6664a0d3c31a5a3376d68ea260d0c
+                    <input name="email1" id="list_email_field" type="email" placeholder="Enter Your Email" required>
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
@@ -107,20 +98,10 @@
                 </div>
                 <div class="field">
                     <label>Message:</label>
-<<<<<<< HEAD
-                    <br>
                     <textarea name="message1" placeholder="Type Here"></textarea>
                 </div>
                 <div class="field">
-                    
-                <input id="list_submit" name="submit1" type="submit" value="Submit"> 
-=======
-                    <textarea name="message" placeholder="Type Here" required></textarea>
-                </div>
-                <div class="field">
-                    
-                <input id="list_submit" class="button" name="submit" type="submit" value="Submit"> 
->>>>>>> d9a9e57277b6664a0d3c31a5a3376d68ea260d0c
+                    <input id="list_submit" name="submit1" type="submit" class="button" value="Submit"> 
                 </div>
             </form>
                 
