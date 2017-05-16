@@ -86,26 +86,66 @@
                 <h4>Enter your contact info for the lastest schmoozing tips!</h4>
                 <div class="field">
                     <label>Name</label>
-                    <input name="name" id="list_name_field" placeholder="Enter Your Name" required>*
+                    <input name="name1" id="list_name_field" placeholder="Enter Your Name" required>*
                 </div>
                 <div class="field">
                     <label>Email</label>
-                    <input name="email" id="list_email_field" type="email" placeholder="Enter Your Email" required>*
+                    <input name="email1" id="list_email_field" type="email" placeholder="Enter Your Email" required>*
                 </div>
                 <div class="field">
                     <label>Phone Number</label>
-                    <input name="phone" id="list_phone_field" type="text" placeholder="(Optional)">
+                    <input name="phone1" id="list_phone_field" type="text" placeholder="(Optional)"> Format XXXXXXXXXX
                 </div>
                 <div class="field">
                     <label>Message:</label>
                     <br>
-                    <textarea name="message" placeholder="Type Here" required></textarea>
+                    <textarea name="message1" placeholder="Type Here"></textarea>
                 </div>
                 <div class="field">
                     
-                <input id="list_submit" name="submit" type="submit" value="Submit"> 
+                <input id="list_submit" name="submit1" type="submit" value="Submit"> 
                 </div>
             </form>
+                
+            <?php
+            require_once 'includes/config.php';
+            $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            //add to mailing list
+            if(isset($_POST['submit1'])) {
+                //user info from form
+                $name = $_POST['name1'];
+                $email = $_POST['email1'];
+                $phone = $_POST['phone1'];
+                $message = $_POST['message1'];
+                
+                $name = filter_input(INPUT_POST,'name1', FILTER_SANITIZE_STRING);
+                $email = filter_input(INPUT_POST,'email1', FILTER_SANITIZE_EMAIL);
+                $phone = filter_input(INPUT_POST,'phone1', FILTER_SANITIZE_NUMBER_INT);
+                $message = filter_input(INPUT_POST,'message1', FILTER_SANITIZE_URL);
+                
+                if ((empty($phone)) && (empty($message))) {
+                    $add_mailing = $mysqli->query("INSERT INTO mailing(name, email) VALUES ('$name', '$email')");
+                    echo "<p>You have been added! You will be up to date on all things Schmooze!</p>";
+                }
+                if ((empty($phone)) && (!empty($message))) {
+                    $add_mailing = $mysqli->query("INSERT INTO mailing(name, email, message) VALUES ('$name', '$email', '$message')");
+                    echo "<p>You have been added! You will be up to date on all things Schmooze!</p>";
+                }
+                if ((!empty($phone)) && (empty($message))) {
+                
+                $add_mailing = $mysqli->query("INSERT INTO mailing(name, email, phone) VALUES ('$name', '$email', '$phone')");
+                echo "<p>You have been added! You will be up to date on all things Schmooze!</p>";
+                }
+                if ((!empty($phone)) && (!empty($message))) {
+                
+                $add_mailing = $mysqli->query("INSERT INTO mailing(name, email, phone, message) VALUES ('$name', '$email', '$phone', '$message')");
+                echo "<p>You have been added! You will be up to date on all things Schmooze!</p>";
+                }
+                
+            }
+                
+            
+            ?>
             </div> <!-- end of second form -->
         </div> <!-- end of container div -->
         
