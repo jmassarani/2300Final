@@ -35,7 +35,7 @@
                 if ($GLOBALS["current_page"] == 'Login') {
                     echo " active";
                 }
-                echo "' href='login.php'>Login</a></li>";
+                echo "' href='login.php'>Login / Signup</a></li>";
             }
         ?>
     </ul>
