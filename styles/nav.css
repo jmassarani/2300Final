@@ -120,7 +120,7 @@ li.dropdown {
     outline:none;
     z-index:100;
     display: none;
-    visibility: none;
+    visibility: hidden;
 }
 .cross{
     background:none;
@@ -140,6 +140,10 @@ li.dropdown {
     visibility: hidden;
 }
 
+.menu {
+    display: block;
+}
+
 @media screen and (max-width: 920px){
     nav li {
         display: inline-block;
@@ -149,11 +153,22 @@ li.dropdown {
     nav ul {
         padding: 0;
     }
-    .cross {
+    
+    .hamburger {
         display: block;
         visibility: visible;
     }
+    
+    .cross {
+        visibility: visible;
+    }
+    
+    .menu {
+        display: none;
+/*        visibility: hidden;*/
+    }
 }
+/*
 
 @media screen and (max-width: 600px){
     nav li {
@@ -164,4 +179,4 @@ li.dropdown {
     nav ul {
         padding: 0;
     }
-}
+}*/

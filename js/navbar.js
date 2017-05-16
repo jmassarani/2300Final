@@ -15,6 +15,24 @@
 window.onload = function () {
 //    $( ".cross" ).hide();
 //    $( ".menu" ).hide();
+    function checkWidth(init)
+    {
+        /*If browser resized, check width again */
+        if ($(window).width() > 920) {
+            if (!init) {
+              $('.menu').css("display", "block");
+            }
+        }
+    }
+
+    $(document).ready(function() {
+        checkWidth(true);
+
+        $(window).resize(function() {
+            checkWidth(false);
+        });
+    }); 
+    
     $( ".hamburger" ).click(function() {
         $( ".menu" ).slideToggle( "slow", function() {
             $( ".hamburger" ).hide();
