@@ -62,18 +62,5 @@
 ?>
             </div> <!-- end of home col-sm-6 div -->
         </div> <!-- end of container div -->
-        
-        
-<!--
-        //postID
-        //postTitle
-        //postDesc
-        //postCont
-        //postDate (2013-05-29 00:00:00)
-    date("d-m-Y h:i:s");
-$date = date('Y-m-d h:i:s');
-                        echo "$date";
--->
-
 	</body>
 </html>

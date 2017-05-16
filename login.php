@@ -65,17 +65,16 @@
                     if ($result && $result->num_rows == 1) {
                         $row = $result->fetch_assoc();
                         $db_hash_password = $row['hashpassword'];
-    //                    echo $db_hash_password;
-
 
                         if( password_verify( $post_password, $db_hash_password ) ) {
                             $db_username = $row['username'];
-                            $_SESSION['logged_user_by_sql'] = $db_username;
-    //                        echo "matched";
-
-                        }
+                           
+                            if($row['privilege'] == 'admin'){ $_SESSION['admin'] = $db_username;
+                            }
+                            else { $_SESSION['logged_user_by_sql'] = $db_username;
+                            }
+                        } //if password matches, start session
                     }
-
 
 
                     $mysqli->close();
@@ -85,15 +84,17 @@
                         echo "<p>Congratulations. You have successfully signed in!<p>";
                         echo "</div>";
                     }
+                    else if ( isset($_SESSION['admin'] ) ) {
+                        echo "<div class='box3'>";
+                        echo "<p>You are an admin!<p>";
+                        echo "</div>";
+                    }
                     else {
                         echo "<div class='box3'>";
                         echo "<p>You did not login successfully.</p>";
                         echo "<p>Please <a href='login.php'>try again</a></p>";
                         echo "</div>";
-
                     }
-    //            $hashed_password = password_hash("schmooze", PASSWORD_DEFAULT) . '<br>';
-    //            echo "<p>Hashed password: $hashed_password</p>";
                 }
             ?>
             
@@ -201,16 +202,13 @@
 
                         if ($flag == true) {
                             //hash password
-//                            $hashed = password_hash($p1, PASSWORD_DEFAULT);
                             $hashed = password_hash($p1, PASSWORD_DEFAULT) . '<br>';
                             
                             $add_user = $mysqli->query("INSERT INTO users(firstname,lastname,email,username,hashpassword,privilege) VALUES ('$fname','$lname','$email','$username','$hashed','viewer')");
                             echo "<p>Your account has been created</p>";
                         }
-                    }
-                    
+                    }         
                 }
-            
                 ?>
             </div>
         </div>
