@@ -67,8 +67,11 @@
                         
                         if(isset($_POST['submit'])){
                             //define comment variables
-                            $nickname=$_POST['nickname'];
-                            $comment = $_POST['comment'];
+                            $nickname = filter_input(INPUT_POST,'nickname', FILTER_SANITIZE_STRING);
+//                            echo "nickname is $nickname";
+                            $comment = filter_input(INPUT_POST, 'comment', FILTER_SANITIZE_SPECIAL_CHARS);
+                            echo "comment is $comment";
+//                                $_POST['comment'];
                             $date = date("Y-m-d H:i:s");
 
                             //add comment to database
