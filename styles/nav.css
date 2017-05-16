@@ -136,7 +136,7 @@ li.dropdown {
     display: block;
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 930px){
     nav li {
         display: inline-block;
         width: 100%;
