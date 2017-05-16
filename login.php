@@ -10,10 +10,13 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
         <link rel="stylesheet" href="styles/form.css">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css"
+    rel="stylesheet" type="text/css" />
         <?php 
     require_once('includes/config.php');
     include 'includes/header.php';
 ?>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 	</head>
 
 	<body>
@@ -91,36 +94,53 @@
     //            echo "<p>Hashed password: $hashed_password</p>";
                 }
             ?>
+            
+            
             <div class="create_user">
             <h2>Are you new to this site and want to create an account?</h2>
-            <form method="post" action="login.php">
+            <form method="post" action="login.php" id = "registration">
                 <div class="field">
                     <label>First Name:</label>
-                    <input type="text" name="fname" required>
+                    <input type="text" name="fname" data-validation="length alphanumeric" data-validation-length="1-12" data-validation-error-msg="User name has to be an alphanumeric value (1-12 chars)">
                 </div>
                 <div class="field">
                     <label>Last Name:</label>
-                    <input type="text" name="lname" required>
+                    <input type="text" name="lname" data-validation="length alphanumeric" data-validation-length="1-12" data-validation-error-msg="User name has to be an alphanumeric value (1-12 chars)">
                 </div>
                 <div class="field">
                     <label>Email:</label>
-                    <input type="text" name = "email" required>
+                    <input type="text" name = "email"  data-validation="email" data-validation-error-msg="You did not enter a valid e-mail">
                 </div>
                 <div class="field">
                     <label>Username:</label>
-                    <input type="text" name="username" required>
+                    <input type="text" name="username"  data-validation="length alphanumeric" data-validation-length="3-12" data-validation-error-msg="User name has to be an alphanumeric value (3-12 chars)">
                 </div>
                 <div class="field">
                     <label>Password:</label>
-                    <input type="password" name="password1" pattern=".{8,}"   required title="8 characters minimum">
+                    <input type="password" name="password_confirmation" data-validation="strength" 
+		 data-validation-strength="1">
                 </div>
                 <div class="field">
                     <label>Repeat Password:</label>
-                    <input type="password" name="password2" >
+                    <input type="password" name="password" data-validation="confirmation" >
                 </div>
                 <input type="submit" name="createnew" value="Create Account">
 
             </form>
+                <script> 
+            $( document ).ready(function() {
+            $.validate({
+            form : '#registration',
+                modules: 'security',
+                errorMessagePosition : 'top',
+                onError : function($form) {
+                return false;
+            }
+                
+            });
+            });
+            
+            </script>
                 <?php
                 require_once 'includes/config.php';
                 $mysqli = new mysqli( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME );
@@ -137,10 +157,10 @@
                     elseif (empty($_POST['username'])) {
                         echo "<p>Please enter a username</p>";
                     }
-                    elseif (empty($_POST['password1'])) {
+                    elseif (empty($_POST['password_confirmation'])) {
                         echo "<p>Please enter a password</p>";
                     }
-                    elseif (empty($_POST['password2'])) {
+                    elseif (empty($_POST['password'])) {
                         echo "<p>Please re-enter your password</p>";
                     }
                     else {
@@ -148,8 +168,8 @@
                         $lname = htmlspecialchars(trim($_POST['lname']));
                         $email = htmlspecialchars(trim($_POST['email']));
                         $username = htmlspecialchars(trim($_POST['username']));
-                        $p1 = htmlspecialchars(trim($_POST['password1']));
-                        $p2 = htmlspecialchars(trim($_POST['password2']));
+                        $p1 = htmlspecialchars(trim($_POST['password_confirmation']));
+                        $p2 = htmlspecialchars(trim($_POST['password']));
                         
                         $flag = true;
                         //if password1 and password2 dont match
