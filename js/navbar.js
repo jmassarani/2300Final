@@ -18,9 +18,18 @@ window.onload = function () {
     function checkWidth(init)
     {
         /*If browser resized, check width again */
-        if ($(window).width() > 920) {
+        if ($(window).width() <= 920) {
+            
             if (!init) {
-              $('.menu').css("display", "block");
+                $('.menu').css("display", "none");
+                $( ".hamburger" ).show();
+            }
+        }
+        else {
+            if (!init) {
+                $('.menu').css("display", "block");
+                $( ".hamburger" ).hide();
+                $( ".cross" ).hide();
             }
         }
     }
@@ -32,6 +41,7 @@ window.onload = function () {
             checkWidth(false);
         });
     }); 
+    
     
     $( ".hamburger" ).click(function() {
         $( ".menu" ).slideToggle( "slow", function() {
