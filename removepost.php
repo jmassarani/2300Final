@@ -16,8 +16,8 @@
                 foreach ($removals as $postID) {
                     $remove = "DELETE FROM blog_posts WHERE postID = $postID";
                     $result = $mysqli->query($remove);
-                        
-                            
+                    
+                    $mysqli->query("DELETE FROM comments WHERE postID = $postID");
                 }
             }
         ?>

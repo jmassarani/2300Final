@@ -30,10 +30,10 @@
                     echo "<form method='post' action='addpost.php'><input class='button' type='submit' name='add' value='Add Post'></form>";
                 }
                 //show remove post for admins
-                else if (isset($_SESSION['admin'])) {
+                if (isset($_SESSION['admin'])) {
                     echo "<form method='post' action='removepost.php'><input class='button' type='submit' name='remove' value='Remove Post'></form>";
                 }
-                else {
+                if (!isset($_SESSION['logged_user_by_sql']) && !isset($_SESSION['admin'])) {
                     echo "<p>Do you have a schmoozing story to share? We'd love to hear from you! Please <a href='login.php'>log in</a> to add a blog post.</p>";
                 }
             ?>

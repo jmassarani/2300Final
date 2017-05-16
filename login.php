@@ -205,7 +205,6 @@
                         if ($flag == true) {
                             //hash password
 
-//                            $hashed = password_hash($p1, PASSWORD_DEFAULT);
                             $hashed = password_hash($p1, PASSWORD_DEFAULT);
                             
                             $add_user = $mysqli->query("INSERT INTO users(firstname,lastname,email,username,hashpassword,privilege) VALUES ('$fname','$lname','$email','$username','$hashed','viewer')");
