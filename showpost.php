@@ -48,7 +48,6 @@
         
                 //comments div
                 echo '<div class="col-sm-6">';
-                    echo '<h3>Comments</h3>';
                     if (isset($_SESSION['logged_user_by_sql']) || isset($_SESSION['admin'])) {
                         //show remove comments button only if user is an admin
                         if(isset($_SESSION['admin'])){
@@ -62,6 +61,7 @@
                         echo '<input name="nickname" type="text"> </div>';
                         echo '<div class="field"> <input class="button" id="submit" name="submit" type="submit"value="Submit"> </div>';
                         echo '</form>';
+                        echo '<h3>Comments</h3>';
                         
                         if(isset($_POST['submit'])){
                             //define comment variables
@@ -74,9 +74,10 @@
                         }
                     } // end if user is logged in
                     else {
+                        echo '<h3>Comments</h3>';
                         echo "<p> Please <a href='login.php'>log in</a> to add a comment.</p>";
                     }
-        
+                    
                     
                     $comment_result = $mysqli->query("SELECT * FROM comments WHERE postID = $id ORDER BY date_time DESC");
                     //show all current comments if there are any
