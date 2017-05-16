@@ -86,7 +86,7 @@
                     }
                     else if ( isset($_SESSION['admin'] ) ) {
                         echo "<div class='box3'>";
-                        echo "<p>Congratulations. You have successfully signed in! You have admin privildges.<p>";
+                        echo "<p>Congratulations. You have successfully signed in! You have admin privileges.<p>";
                         echo "</div>";
                     }
                     else {
