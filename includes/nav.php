@@ -1,7 +1,7 @@
 <!--<script src="../js/navbar.js"></script>-->
 <nav id="nav_bar" class="navbar-fixed">
-    <ul>
-        <li><img src="images/header-white.png" id="header_image" alt="Logo"></li>
+    <img src="images/header-white.png" id="header_image" alt="Logo">
+    <ul class="menu">
         <?php
             $nav_items = array (
                 "Home"=>"index.php",
@@ -40,4 +40,7 @@
             }
         ?>
     </ul>
+    
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#735;</button>
 </nav>
