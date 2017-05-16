@@ -28,6 +28,7 @@
             <?php
                 if (isset($_POST['logout'])) {
                     unset($_SESSION['logged_user_by_sql']);
+                    unset($_SESSION['admin']);
                     session_destroy();
                     header("Location: index.php");
                 }
