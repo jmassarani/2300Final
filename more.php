@@ -23,7 +23,7 @@
             <h3>schmooze |SHmo͞oz|</h3> 
             <h5>(also shmooze) Verb [no obj.] </h5>
             <p>To talk cozily in a friendly and comfortable manner, getting to know other people with an ultimate goal to impress, communicate, and create authentic relationships. </p>
-            <div class="col-xs-12">
+            <div class="col-xs-10">
             <h2>When do I need a schmoozer or two?</h2>
                 Schmoozers are perfect for:
                 <ul>
@@ -40,7 +40,7 @@
                     <li>Providing some more feet on the ground at a networking event</li>
                     <li>Helping a brilliant techie translate their great ideas into clear concepts</li>
                 </ul>
-            </div> <!-- end of col-xs-12 div-->
+            
             <h2>Why hire a Schmoozer?</h2>
             <ul> 
                 <li>Do you notice that when you break bread with an acquaintance, you’re paving the way to creating true friendship?</li>
@@ -49,7 +49,7 @@
                 <li>Have you attended awards dinners, special events, conferences and had a hard time “getting started” to mix and meet people in the crowd?</li>
                 <li>Are you a brilliant engineer, artist, author, computer genius but get a bit queasy when you need to be in the limelight or a social gathering? Or develop a plan of action to market your product or service? </li>
             </ul>
-
+            </div> <!-- end of col-xs-10 div-->
         </div>
         <footer>
         </footer>
