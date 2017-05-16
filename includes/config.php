@@ -6,4 +6,3 @@ define( 'DB_NAME', 'info230_SP17_fp_anon' );
 define('DB_USER', 'fp_anon');
 // ...and password
 define('DB_PASSWORD', 'schmooze'); ?>
-
